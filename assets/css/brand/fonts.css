@@ -1,0 +1,49 @@
+:root {
+    --header-text-size: 20px;
+    --header-text-weight: 400;
+    --header-text-line-height: 1.5;
+
+    --header-title-size: 24px;
+    --header-title-weight: 600;
+    --header-title-line-height: 1.5;
+}
+
+:root {
+    --body-text-size: 20px;
+    --body-text-weight: 400;
+    --body-text-line-height: 1.5;
+
+    --body-bold-text-size: 20px;
+    --body-bold-text-weight: 600;
+    --body-bold-text-line-height: var(--body-text-line-height);
+
+    --body-title-size: 24px;
+    --body-title-weight: 600;
+    --body-title-line-height: 1.5;
+}
+.headerTitle {
+    font-size: var(--header-title-size);
+    font-weight: var(--header-title-weight);
+    line-height: var(--header-title-line-height);
+}
+.headerText {
+    font-size: var(--header-text-size);
+    font-weight: var(--header-text-weight);
+    line-height: var(--header-text-line-height);
+}
+
+.bodyText {
+    font-size: var(--body-text-size);
+    font-weight: var(--body-text-weight);
+    line-height: var(--body-text-line-height);
+}
+.bodyTitle {
+    font-size: var(--body-title-size);
+    font-weight: var(--body-title-weight);
+    line-height: var(--body-title-line-height);
+}
+.bodyBoldText {
+    font-size: var(--body-bold-text-size);
+    font-weight: var(--body-bold-text-weight);
+    line-height: var(--body-bold-text-line-height);
+}
