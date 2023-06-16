@@ -1,5 +1,8 @@
 <template>
-    <TopBarMain />
+    <div class="topFrame flex column r">   
+        <TopBarMain />
+        <HeaderMain />
+    </div>
     <main>
         <NuxtPage />
     </main>
@@ -7,6 +10,10 @@
 </template>
 
 <style scoped>
+.topFrame {
+    /* height: max(600px, 100vh); */
+    height: 100vh;
+}
 main {
     min-height: 100vh;
     display: flex;

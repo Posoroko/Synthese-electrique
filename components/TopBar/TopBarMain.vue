@@ -3,7 +3,7 @@ import { topBarContent } from '@/assets/content/topBar.js'
 </script>
 
 <template>
-    <nav class="topBar flex justifyBetween alignCenter divided_20-60-20">
+    <nav class="topBar w100 flex justifyBetween alignCenter divided_20-60-20">
         <div class="topBarBox logoBox">
             <NuxtLink to="/" class="">
                 <img :src="topBarContent.logoUrl" class="logo" alt="Logo synthèse électrique">
