@@ -1,12 +1,12 @@
 :root {
     /* blue */
-    --brand-clolor-1: rgb(91, 197, 242); 
+    --brand-color-1: rgb(91, 197, 242); 
     /* yellow */
     --brand-color-2: rgb(255, 232, 0);
 }
 
 .brandColor1 {
-    color: var(--brand-clolor-1);
+    color: var(--brand-color-1);
 }
 .brandColor2 {
     color: var(--brand-color-2);

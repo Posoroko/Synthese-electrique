@@ -1,3 +1,12 @@
 :root {
-    --mainWidth: min(1200px, 100%);
+    --main-width-basis: 1400px;
+    --main-width: min(var(--main-width-basis), 100%);
+    --main-width-padding: 20px;
+}
+
+.mainWidth {
+    width: var(--main-width);
+    padding-left: var(--main-width-padding);
+    padding-right: var(--main-width-padding);
+    margin: auto;
 }

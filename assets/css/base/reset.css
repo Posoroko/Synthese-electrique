@@ -18,3 +18,7 @@ ul {
 address {
     font-style: normal;
 }
+
+a {
+    all: unset;
+}

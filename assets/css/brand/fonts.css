@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 :root {
     --header-text-size: 20px;
     --header-text-weight: 400;
@@ -6,20 +8,26 @@
     --header-title-size: 24px;
     --header-title-weight: 600;
     --header-title-line-height: 1.5;
+
+    --top-bar-tab-size: clamp(20px, 3vw, 40px);
+    --top-bar-weight: 700;
+    --top-bar-line-height: 1;
 }
 
 :root {
-    --body-text-size: 20px;
+    --body-text-size-1: clamp(16px, 3vw, 18px)
+    --body-text-line-height-1: 1.5;
+
+    --body-text-size-2: clamp(18px, 3.5vw, 24px);
+    --body-text-line-height-2: 1.5;
+
     --body-text-weight: 400;
-    --body-text-line-height: 1.5;
-
-    --body-bold-text-size: 20px;
     --body-bold-text-weight: 600;
-    --body-bold-text-line-height: var(--body-text-line-height);
 
-    --body-title-size: 24px;
-    --body-title-weight: 600;
-    --body-title-line-height: 1.5;
+    --body-title-size: clamp(22px, 4vw, 32px);
+    --body-title-weight: 700;
+    --body-title-line-height: 1;
+    --body-title-font-family: 'Arvo', serif;
 }
 .headerTitle {
     font-size: var(--header-title-size);
@@ -31,19 +39,33 @@
     font-weight: var(--header-text-weight);
     line-height: var(--header-text-line-height);
 }
+.topBarTabText {
+    font-size: var(--top-bar-tab-size);
+    font-weight: var(--top-bar-weight);
+    line-height: var(--top-bar-line-height);
+}
 
-.bodyText {
-    font-size: var(--body-text-size);
+
+.bodyText1 {
+    font-size: var(--body-text-size-1);
     font-weight: var(--body-text-weight);
-    line-height: var(--body-text-line-height);
+    /* line-height: var(--body-text-line-height-1); */
+}
+.bodyText2 {
+    font-size: var(--body-text-size-2);
+    font-weight: var(--body-text-weight);
+    /* line-height: var(--body-text-line-height-2); */
 }
 .bodyTitle {
+    font-family: var(--body-title-font-family);
     font-size: var(--body-title-size);
     font-weight: var(--body-title-weight);
     line-height: var(--body-title-line-height);
 }
 .bodyBoldText {
-    font-size: var(--body-bold-text-size);
     font-weight: var(--body-bold-text-weight);
-    line-height: var(--body-bold-text-line-height);
+}
+
+.icon {
+    font-family: 'Material Icons';
 }

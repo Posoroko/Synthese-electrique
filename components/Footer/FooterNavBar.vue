@@ -1,0 +1,29 @@
+<template>
+    <nav class="footerNavBar">
+        <ul class="mainWidth h100 mainWidth flex gap10 justifyAround alignCenter wrap">
+            <li class="linkText h100"><NuxtLink to="/">ACCUEIL</NuxtLink></li>
+                <div class="bottomBarScratchBox"> <DecorSmallScratch /> </div>
+            <li class="linkText"><NuxtLink to="/plan-du-site">PLAN DU SITE</NuxtLink></li>
+                <div class="bottomBarScratchBox"> <DecorSmallScratch /> </div>
+            <li class="linkText"><NuxtLink to="/mentions-legales">MENTIONS LEGALES</NuxtLink></li>
+                <div class="bottomBarScratchBox"> <DecorSmallScratch /> </div>
+            <li class="linkText"><a href="https://www.comkreiz.com/" target="_blank">WEB DESIGNER : COM KREIZ</a></li>
+                <div class="bottomBarScratchBox"> <DecorSmallScratch /> </div>
+            <li class="linkText "><a class="raleWay" href="https://posoroko.com/" target="_blank">DEV : STUDIO POSOROKO</a></li>
+        </ul>
+    </nav>
+</template>
+
+<style>
+.footerNavBar {
+    color: white;
+    background-color: var(--brand-sec);
+    padding: 20px 20px;
+    margin-top: 20px;
+    background-image: url('/images/cloth-pattern.jpg');
+    background-repeat: repeat;
+}
+.linkText {
+    border-bottom: 1px solid white;
+}
+</style>
