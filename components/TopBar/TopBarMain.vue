@@ -28,12 +28,12 @@ import { topBarContent } from '@/assets/content/topBar.js'
 
 
 .logo {
-    height: 10vw;
+    height: 100px;
 }
 .topBar {
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, var(--brand-color-1) 100%);
-    padding: 6vw 3vw;
-    height: 100px;
+    padding: 3vw 3vw;
+    /* height: 100px; */
 }
 
 .tabBox {

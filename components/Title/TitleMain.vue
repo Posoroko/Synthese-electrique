@@ -1,26 +1,16 @@
 <script setup>
 const props = defineProps({
-    title: {
-        type: String,
-        required: true
-    },
-    type: {
-        type: String,
-        required: true,
-        options: ['boxed', 'unboxed']
-    },
-    line: {
-        type: Boolean,
-    }
+    title: String,
+    typeClass: String,
+    line: Boolean,
+    leftPadding: String
 })
 </script>
 
 <template>
-    <h2 class="bodyTitle titleResponsiveLeftPadding" 
-        :class="[
-            type,
-            { 'line': line == true}
-        ]"> {{ title }} </h2>
+    <h2 class="titleResponsiveLeftPadding" :class="[ typeClass, { 'line': line == true} ]">
+        {{ title }}
+    </h2>
 </template>
 
 
@@ -34,7 +24,7 @@ const props = defineProps({
     margin-top: 5px;
 }
 .titleResponsiveLeftPadding {
-    padding-left: 5%;
+    padding-left: v-bind(leftPadding);
 }
 
 </style>

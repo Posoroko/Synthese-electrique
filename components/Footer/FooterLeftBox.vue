@@ -1,7 +1,7 @@
 <template>
     <address class="h100 flex column alignCenter justifyCenter gap20">
         <div class="w100">
-            <TitleMain title="SYNTHESE ELECTRIQUE" type="unboxed" :line="true" />
+            <TitleMain class="bodyTitle" title="SYNTHESE ELECTRIQUE" type="unboxed" :line="true" />
         </div>
 
         <ul class="addressList flex column gap20 "> 

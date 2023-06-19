@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
 
+@import url('https://fonts.googleapis.com/icon?family=Material+Symbols');
+
 :root {
     --header-text-size: 20px;
-    --header-text-weight: 400;
+    --header-text-weight: 600;
     --header-text-line-height: 1.5;
 
-    --header-title-size: 24px;
+    --header-title-size: 40px;
     --header-title-weight: 600;
-    --header-title-line-height: 1.5;
+    --header-title-line-height: 1;
 
     --top-bar-tab-size: clamp(20px, 3vw, 40px);
     --top-bar-weight: 700;
@@ -19,6 +21,7 @@
     font-size: var(--header-title-size);
     font-weight: var(--header-title-weight);
     line-height: var(--header-title-line-height);
+    text-transform: uppercase;
 }
 
 .headerText {
@@ -72,9 +75,8 @@
 .bodyText1 b {
     font-weight: var(--body-text-bold-weight-2);
 }
-.bodyParagraph {
-    width: 45ch;
-    padding: 20px;
+.bodyParagraphWidth {
+    width: min(45ch, 100%);
 }
 
 
@@ -91,8 +93,12 @@
     font-size: var(--body-title-size);
     font-weight: var(--body-title-weight);
     line-height: var(--body-title-line-height);
+    text-transform: uppercase;
 }
 
 .icon {
     font-family: 'Material Icons';
+}
+.symbol {
+    font-family: 'Material Symbols';
 }
