@@ -1,2 +1,6 @@
 @import url('@/assets/css/brand/fonts.css');
 @import url('@/assets/css/brand/colors.css');
+
+.clothPattern{
+    background-image: url('/images/cloth-pattern.jpg');
+}

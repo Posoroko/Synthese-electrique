@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
 
 :root {
     --header-text-size: 20px;
@@ -14,56 +15,82 @@
     --top-bar-line-height: 1;
 }
 
-:root {
-    --body-text-size-1: clamp(16px, 3vw, 18px)
-    --body-text-line-height-1: 1.5;
-
-    --body-text-size-2: clamp(18px, 3.5vw, 24px);
-    --body-text-line-height-2: 1.5;
-
-    --body-text-weight: 400;
-    --body-bold-text-weight: 600;
-
-    --body-title-size: clamp(22px, 4vw, 32px);
-    --body-title-weight: 700;
-    --body-title-line-height: 1;
-    --body-title-font-family: 'Arvo', serif;
-}
 .headerTitle {
     font-size: var(--header-title-size);
     font-weight: var(--header-title-weight);
     line-height: var(--header-title-line-height);
 }
+
 .headerText {
     font-size: var(--header-text-size);
     font-weight: var(--header-text-weight);
     line-height: var(--header-text-line-height);
 }
+
 .topBarTabText {
     font-size: var(--top-bar-tab-size);
     font-weight: var(--top-bar-weight);
     line-height: var(--top-bar-line-height);
 }
+:root {
+    --body-text-family: 'Montserrat';
 
+    --body-text-size-1: clamp(16px, 3vw, 18px);
+    --body-text-weight-1: 400;
+    --body-text-line-height-1: 30px;
+
+    --body-text-bold-weight-1: 600;
+
+    --body-text-size-2: clamp(18px, 3.5vw, 24px);
+    --body-text-line-height-2: 1.5;
+    --body-text-weight-2: 400;
+
+    --body-text-bold-weight-2: 700;
+
+}
+
+.bodyText1,
+.bodyText2 {
+    font-family: var(--body-text-family);
+}
 
 .bodyText1 {
     font-size: var(--body-text-size-1);
-    font-weight: var(--body-text-weight);
-    /* line-height: var(--body-text-line-height-1); */
+    font-weight: var(--body-text-weight-1);
+    line-height: var(--body-text-line-height-1);
 }
 .bodyText2 {
     font-size: var(--body-text-size-2);
     font-weight: var(--body-text-weight);
     /* line-height: var(--body-text-line-height-2); */
 }
+.bodyText1 .bold,
+.bodyText1 b {
+    font-weight: var(--body-text-bold-weight-1);
+}
+.bodyText2 .bold,
+.bodyText1 b {
+    font-weight: var(--body-text-bold-weight-2);
+}
+.bodyParagraph {
+    width: 45ch;
+    padding: 20px;
+}
+
+
+:root {
+    --body-title-font-family: 'Arvo', serif;
+
+    --body-title-size: clamp(22px, 4vw, 32px);
+    --body-title-weight: 700;
+    --body-title-line-height: 1;
+}
+
 .bodyTitle {
     font-family: var(--body-title-font-family);
     font-size: var(--body-title-size);
     font-weight: var(--body-title-weight);
     line-height: var(--body-title-line-height);
-}
-.bodyBoldText {
-    font-weight: var(--body-bold-text-weight);
 }
 
 .icon {

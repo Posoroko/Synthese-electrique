@@ -1,11 +1,15 @@
 <template>
     <div class="topFrame flex column r">   
         <TopBarMain />
+        
         <HeaderMain />
     </div>
-    <main>
+
+    <main class="r">
+        <h1 class="r">main</h1>
         <NuxtPage />
     </main>
+
     <FooterMain />
 </template>
 

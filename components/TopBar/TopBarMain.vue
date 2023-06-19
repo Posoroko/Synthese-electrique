@@ -4,7 +4,7 @@ import { topBarContent } from '@/assets/content/topBar.js'
 
 <template>
     <nav class="topBar w100 flex justifyBetween alignCenter divided_20-60-20">
-        <div class="topBarBox logoBox">
+        <div class="topBarBox logoBox divided_childBox">
             <NuxtLink to="/" class="">
                 <img :src="topBarContent.logoUrl" class="logo" alt="Logo synthèse électrique">
             </NuxtLink>
@@ -25,6 +25,7 @@ import { topBarContent } from '@/assets/content/topBar.js'
 </template>
 
 <style scoped>
+
 
 .logo {
     height: 10vw;
