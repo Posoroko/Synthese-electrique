@@ -1,0 +1,5 @@
+<template>
+    <CustomDepannageIntroSection />
+
+    <CustomDepannageTarifsSection />
+</template>

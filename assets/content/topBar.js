@@ -1,9 +1,9 @@
 export const topBarContent= {
-    logoUrl: "/images/logo.webp",
+    logoUrl: "/images/logo.png",
     tabs: [
         {
-            text: "Dépanage",
-            url: "/depanage"
+            text: "Dépannage",
+            url: "/depannage"
         },
         {
             text: "Installation <br> électrique",
@@ -11,7 +11,7 @@ export const topBarContent= {
         },
         {
             text: "Chauffage <br> ventilation",
-            url: "/chauffage-ventilation"
+            url: "/chauffage-et-ventilation"
         }
     ],
     contactLinks: [

@@ -1,5 +1,9 @@
+<script setup>
+
+</script>
+
 <template>
-    <header class="relative r">
+    <header class="relative">
         <img class="w100 imageLandscape" src="/images/ampoule/ampoule-large.jpg" alt="">
         <img class="w100 imagePortrait" src="/images/ampoule/ampoule-square.jpg" alt="">
 
@@ -57,7 +61,7 @@ header img {
 }
 .headerText {
     width: min(100%, 35ch);
-    font-size: clamp(18px, 3vw, 30px);
+    font-size: clamp(18px, 3vw, 24px);
     font-family: 'Montserrat', sans-serif;
 }
 @media (orientation: portrait) {

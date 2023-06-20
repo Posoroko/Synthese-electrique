@@ -10,11 +10,8 @@ import { topBarContent } from '@/assets/content/topBar.js'
             </NuxtLink>
         </div>
 
-        <div class="topBarBox tabBox flex justifyEvenly gap20 flex">
-            <NuxtLink class="topBarTabText topBarTab flex alignCenter textAlignCenter pointer" v-html="tab.text" v-for="(tab, index) in topBarContent.tabs" :key="index" :to="tab.url">
-                
-            </NuxtLink>
-        </div>
+        <TopBarTabBox :tabs="topBarContent.tabs" />
+        <TopBarBurgerMenu :tabs="topBarContent.tabs" />
 
         <div class="topBarBox socialBox flex alignCenter justifyCenter gap20">
             <a v-for="(link, index) in topBarContent.contactLinks" :key="index" :href="link.value" target="_blank" rel="noopener noreferrer">
@@ -33,12 +30,26 @@ import { topBarContent } from '@/assets/content/topBar.js'
 .topBar {
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, var(--brand-color-1) 100%);
     padding: 3vw 3vw;
-    /* height: 100px; */
+    overflow: visible;
+    box-shadow: 0 0 10px black;;
 }
 
 .tabBox {
     width: 60%;
 }
+@media screen and (max-width: 819px) {
+    .tabBox {
+        display: none;
+    }
+
+}
+@media screen and (min-width: 820px) {
+    .burgerMenu {
+        display: none;
+    }
+
+}
+
 .topBarTab {
     background-color: transparent;
     padding: 10px 25px;
@@ -59,11 +70,11 @@ import { topBarContent } from '@/assets/content/topBar.js'
 
 .topBarContactIcon{
     font-size: clamp(20px, 4vw, 30px);
-    line-height: clamp(20px, 3vw, 30px);
+    line-height: clamp(20px, 4vw, 30px);
     color: var(--brand-color-1);
     background-color: #fff;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 500px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.603);
     transition: 300ms ease;
     cursor: pointer;

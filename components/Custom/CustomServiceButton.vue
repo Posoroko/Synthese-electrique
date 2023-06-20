@@ -41,6 +41,7 @@ const props = defineProps({
     cursor: pointer;
     background-color: #1a1a1a;
     box-shadow: 0 0 10px black;
+    transition: 300ms ease;
 }
 .serviceLink div {
     width: 100%;
@@ -69,6 +70,7 @@ path {
 .serviceLink:hover {
     background-color: var(--brand-color-2);
     box-shadow: 0 0 10px var(--brand-color-2);
+    transition: 300ms ease;
 }
 .serviceLink:hover svg path {
     fill: black;

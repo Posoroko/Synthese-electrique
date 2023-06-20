@@ -1,6 +1,6 @@
 <script setup>
     const props = defineProps({
-        orientation: String,
+        // orientation: String,
         options: ['portrait', 'landscape'],
         imageSrc: String,
         imageAlt: String
@@ -8,9 +8,11 @@
 </script>
 
 <template>
-    <div class="imageBox" :class="orientation">
-        <div class="wireframe r"></div>
-        <img :src="imageSrc" :alt="imageAlt">
+    <div class="imageBox centered">
+        <!-- <div class="wireframe"></div> -->
+        <div class="frame relative">
+            <img class="" :src="imageSrc" :alt="imageAlt">
+        </div>
     </div>
 </template>
 
@@ -20,33 +22,32 @@
     padding: 0 0 20px 20px;
     position: relative;
 }
-
-.imageBox.portrait{
-    height: 75vh;
-    width: 55vh;
-
+.imageBox {
+    width: min(90%, 90vw);
+    height: min(500px, 90vw);
 }
-
-.imageBox.landscape {
-    height: 55vh;
-    width: 75vh;  
+.frame {
+    max-width: 100%;
+    max-height: 100%;
+    isolation: isolate;
 }
-
 img {
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
+    max-width: 100%;
+    max-height: min(500px, 90vw);
+    position: relative;
+    object-fit: contain;
 }
 
-.wireframe {
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-    border: 3px solid var(--brand-color-2);
+.frame::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    bottom: -20px;
+    left: -20px;
+    border: 3px solid var(--brand-color-2);
+    z-index: -1;
 }
+
 </style>

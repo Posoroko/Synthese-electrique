@@ -1,5 +1,5 @@
 <template>
-    <CustomImageBoxMain orientation="landscape" imageSrc="/images/wall-600-100q.webp" />
+    <CustomIndexIntroSection />
     
     <CustomServiceSection />
 

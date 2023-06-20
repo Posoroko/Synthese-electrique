@@ -8,14 +8,14 @@ const props = defineProps({
 </script>
 
 <template>
-    <h2 class="titleResponsiveLeftPadding" :class="[ typeClass, { 'line': line == true} ]">
+    <h2 class="titleResponsiveLeftPadding title" :class="[ typeClass, { 'line': line == true} ]">
         {{ title }}
     </h2>
 </template>
 
 
 <style scoped>
-.bodyTitle.line::after {
+.title.line::after {
     content: "";
     display: block;
     width: 150px;

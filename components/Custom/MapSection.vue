@@ -6,7 +6,7 @@
 
         <template v-slot:box2>
             <div class="full">
-                <TitleMain title="Zônez d'intervention" :line="true"/>
+                <TitleMain title="Zône d'intervention" :line="true" />
 
                 <p class="bodyText1 bodyParagraphWidth marTop20">
                     Nous intervenons dans un rayon de <b>50 kms autour de Carhaix.</b> <br> <br> <b>Exceptionnellement</b> nous pouvons intervenir <b>au-delà</b> de cette limite. N’hésitez pas à nous contacter, un diagnostic gratuit de votre panne peut, dans certains cas, être effectué.

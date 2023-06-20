@@ -1,6 +1,6 @@
 <template>
     <address class="h100 flex column alignCenter justifyCenter gap20">
-        <div class="w100">
+        <div class="w100 pad20">
             <TitleMain class="bodyTitle" title="SYNTHESE ELECTRIQUE" type="unboxed" :line="true" />
         </div>
 
