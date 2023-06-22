@@ -10,7 +10,7 @@
     --header-title-weight: 600;
     --header-title-line-height: 1;
 
-    --top-bar-tab-size: clamp(20px, 3vw, 40px);
+    --top-bar-tab-size: clamp(20px, 3vw, 32px);
     --top-bar-weight: 700;
     --top-bar-line-height: 1;
 }

@@ -2,9 +2,9 @@
 export default defineNuxtConfig({
     runtimeConfig: {
         public: {
-            siteUrl: 'https://milesperformance.com',
-            siteName: 'Synthèse électrique',
-            siteDescription: "Synthèse élecrtique, électricien à Carhaix-PLouguer.",
+            siteUrl: "https://syntheseelectric.fr",
+            siteName: 'Synthèse électric, électricien à Maël-Carhaix.',
+            siteDescription: "Synthèse élecrtique, électricien à Maël-Carhaix.",
             language: 'fr-FR',
             titleSeparator: '|'
         }
@@ -18,14 +18,14 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: 'fr'
             },
-            // link: [
-            //     { rel: 'icon', type: 'image/png', href: '/favicon/favicon-32x32.png', },
-            //     { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png', },
-            //     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png', },
-            //     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png', },
-            //     { rel: "manifest", href: "/favicon/site.webmanifest" },
-            //     { rel: "shortcut icon", href: "/favicon/favicon.ico" }
-            // ],
+            link: [
+                { rel: 'icon', type: 'image/png', href: '/favicon/favicon-32x32.png', },
+                { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png', },
+                { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png', },
+                { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png', },
+                { rel: "manifest", href: "/favicon/site.webmanifest" },
+                { rel: "shortcut icon", href: "/favicon/favicon.ico" }
+            ],
             meta: [
                 {
                     name: 'viewport',

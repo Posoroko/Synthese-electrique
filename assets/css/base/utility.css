@@ -66,6 +66,8 @@
 .bottom50 {bottom: 0;}
 
 .pointer {cursor: pointer;}
+.noPointer {cursor: not-allowed;}
+.noSelection {user-select: none;}
 
 .relative {position: relative;}
 .absolute {position: absolute;}

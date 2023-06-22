@@ -18,13 +18,13 @@
             </li>
 
             <li class="linkText ">
-                <a class="raleWay" href="https://posoroko.com/" target="_blank">DEV : STUDIO POSOROKO</a>
+                <a class="raleWay" href="https://monsieuredgar.com/" target="_blank">DEV : STUDIO POSOROKO</a>
             </li>
         </ul>
     </nav>
 </template>
 
-<style>
+<style scoped>
 a {cursor: pointer;}
 .footerNavBar {
     color: white;

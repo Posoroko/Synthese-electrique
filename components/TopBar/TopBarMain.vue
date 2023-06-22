@@ -1,5 +1,23 @@
 <script setup>
 import { topBarContent } from '@/assets/content/topBar.js'
+
+contactLinks: [
+    {
+        type: "telephone",
+        value: "06 00 00 00 00",
+        icon: "call"
+    },
+    {
+        type: "email",
+        value: "synthese-electrique@outlook.fr",
+        icon: "alternate_email"
+    },
+    {
+        type: "address",
+        value: "Maël-Carhaix",
+        icon: "location_on"
+    }
+] 
 </script>
 
 <template>
@@ -13,13 +31,30 @@ import { topBarContent } from '@/assets/content/topBar.js'
         <TopBarTabBox :tabs="topBarContent.tabs" />
         <TopBarBurgerMenu :tabs="topBarContent.tabs" />
 
-        <div class="topBarBox socialBox flex alignCenter justifyCenter gap20">
-            <a v-for="(link, index) in topBarContent.contactLinks" :key="index" :href="link.value" target="_blank" rel="noopener noreferrer">
-                <div class="topBarContactIcon icon">{{ link.icon }}</div>
-            </a>
-        </div>
+        <TopBarContactBox />
+        
     </nav>
 </template>
+<style>
+.topBarTab {
+    background-color: transparent;
+    padding: 10px 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 10px transparent;
+    transition: 300ms ease;
+    overflow: visible;
+    
+}
+
+.topBarTab:hover,
+.topBarTab.active {
+    background-color: var(--brand-color-2);
+    padding: 10px 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 10px rgba(255, 255, 0, 0.562);
+    transition: 300ms ease;
+}
+</style>
 
 <style scoped>
 
@@ -29,7 +64,7 @@ import { topBarContent } from '@/assets/content/topBar.js'
 }
 .topBar {
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, var(--brand-color-1) 100%);
-    padding: 3vw 3vw;
+    padding: 2vw 2vw;
     overflow: visible;
     box-shadow: 0 0 10px black;;
 }
@@ -50,38 +85,4 @@ import { topBarContent } from '@/assets/content/topBar.js'
 
 }
 
-.topBarTab {
-    background-color: transparent;
-    padding: 10px 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px 10px transparent;
-    transition: 300ms ease;
-}
-.topBarTab:hover {
-    background-color: var(--brand-color-2);
-    padding: 10px 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px 10px rgba(255, 255, 0, 0.562);
-    transition: 300ms ease;
-}
-
-
-
-
-.topBarContactIcon{
-    font-size: clamp(20px, 4vw, 30px);
-    line-height: clamp(20px, 4vw, 30px);
-    color: var(--brand-color-1);
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 500px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.603);
-    transition: 300ms ease;
-    cursor: pointer;
-}
-.topBarContactIcon:hover{
-    color: white;
-    background-color: var(--brand-color-1);
-    transition: 300ms ease;
-}
 </style>

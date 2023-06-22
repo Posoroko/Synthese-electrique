@@ -1,5 +1,5 @@
 <template>
-    <address class="h100 flex column alignCenter justifyCenter gap20">
+    <address class="h100 flex column alignCenter justifyCenter gap20" id="footerAddress">
         <div class="w100 pad20">
             <TitleMain class="bodyTitle" title="SYNTHESE ELECTRIQUE" type="unboxed" :line="true" />
         </div>
