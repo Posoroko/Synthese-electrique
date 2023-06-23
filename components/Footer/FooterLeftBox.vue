@@ -8,7 +8,7 @@
             <li class="flex alignCenter gap10 "> <span class="icon">call</span> 02 56 43 11 50 - 06 16 61 49 97</li> 
 
             <li>
-                <a class="flex alignCenter gap10" href="emailto:synthese-electric@outlook.fr">
+                <a class="flex alignCenter gap10 pointer mailLink" href="mailto:synthese-electric@outlook.fr">
                     <span class="icon">alternate_email</span> synthese-electric@outlook.fr
                 </a>
             </li> 
@@ -31,5 +31,13 @@
     font-size: clamp(20px, 3vw, 30px);
     color: var(--brand-color-2);
     font-weight: 700;
+}
+.mailLink {
+    color: black;
+    transition: 300ms ease;
+}
+.mailLink:hover {
+    color: var(--brand-color-2);
+    transition: 20ms ease;
 }
 </style>

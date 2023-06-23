@@ -66,11 +66,22 @@ const certifications = [
 }
 .certifLink{
     width: max(calc(100% / 7), 100px);
+    
     rotate: 0deg;
     transition: 100ms ease;
 }
+.certifImage {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+.certifLink:nth-child(1){
+    border-radius: 50%;
+}
 .certifLink.pointer:hover{
-    rotate: 2.5deg;
+    /* rotate: 2.5deg; */
+    scale: 1.02;
+    box-shadow: 0 0 20px 5px rgb(0, 0, 0);
     transition: 100ms ease;
 }
 </style>

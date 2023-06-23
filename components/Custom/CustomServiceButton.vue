@@ -40,7 +40,7 @@ const props = defineProps({
     overflow: hidden;
     cursor: pointer;
     background-color: #1a1a1a;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.863);
     transition: 300ms ease;
 }
 .serviceLink div {

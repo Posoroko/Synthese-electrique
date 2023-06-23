@@ -28,8 +28,8 @@ const swapImage = (e) => {
 
         <template v-slot:box2>
             <div class="bodyText1 w100 pad20">
+                <h3 class="imageTitle montserrat">{{ images[counter].title }}</h3>
                 <p>{{ images[counter].alt }}</p>
-                <p v-if="images[counter].state">{{ images[counter].state }}</p>
             </div>
             <div class="full h100 pad20">
                 <img class="thumbnail" v-for="image in images" :key="image.id" 
@@ -42,6 +42,11 @@ const swapImage = (e) => {
 </template>
 
 <style scoped>
+.imageTitle {
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+}
 .photoAlbumSection{
     padding: 80px 0;
 }
@@ -55,8 +60,9 @@ const swapImage = (e) => {
     transition: 100ms ease;
 }
 .thumbnail:hover {
-    transform: rotateZ(5deg);
+    scale: 1.05;
+    z-index: 1000;
     transition: 100ms ease;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 15px 5px rgb(0, 0, 0);
 }
 </style>

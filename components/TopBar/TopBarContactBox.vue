@@ -45,11 +45,11 @@ function handleHover(e) {
 
         <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
             <a class="mobileCallButton appearingButton pointer" href="tel:0256431150">
-                <span class="icon">call</span><span class="">02 56 43 11 50</span>
+                <span class="icon">call</span><span class="montserrat">02 56 43 11 50</span>
             </a>
 
             <a class="mobileCallButton appearingButton pointer" href="tel:0616614997">
-                <span class="icon">call</span><span>06 16 61 49 97</span>
+                <span class="icon">call</span><span class="montserrat">06 16 61 49 97</span>
             </a>
         </div>
 
@@ -63,11 +63,11 @@ function handleHover(e) {
 
         <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
             <a class=" appearingButton" href="#">
-                <span class="icon">call</span><span class="">02 56 43 11 50</span>
+                <span class="icon">call</span><span class="montserrat">02 56 43 11 50</span>
             </a>
 
             <a class=" appearingButton" href="#">
-                <span class="icon">call</span><span>06 16 61 49 97</span>
+                <span class="icon">call</span><span class="montserrat">06 16 61 49 97</span>
             </a>
         </div>
 
@@ -75,7 +75,7 @@ function handleHover(e) {
 
         <a class="topBarContactIcon locationHoverable icon" href="#" @mouseenter="handleHover" @mouseleave="handleHover" data-target="location">location_on</a>
 
-        <p class="appearingButton location" v-if="maelCarhaixIsOpen"> <span class="icon">location_on</span> Maël-Carhaix</p>
+        <p class="appearingButton location montserrat" v-if="maelCarhaixIsOpen"> <span class="icon">location_on</span> Maël-Carhaix</p>
     </div>
 </template>
 
@@ -130,7 +130,7 @@ function handleHover(e) {
     width: 30px;
     height: 30px;
     color: white;
-    background-color: green;
+    background-color: var(--brand-color-1);
     border-radius: 100px;
     padding: 5px;
     display: grid;

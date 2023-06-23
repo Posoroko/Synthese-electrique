@@ -60,7 +60,7 @@ contactLinks: [
 
 
 .logo {
-    height: 110px;
+    height: clamp(50px, 10vw, 100px);
 }
 .logo:hover {
     animation-name: move;
