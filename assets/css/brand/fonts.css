@@ -3,19 +3,25 @@
 
 :root {
     --header-text-size: 20px;
-    --header-text-weight: 600;
+    --header-text-weight: 400;
     --header-text-line-height: 1.5;
 
     --header-title-size: 40px;
     --header-title-weight: 600;
     --header-title-line-height: 1;
 
-    --top-bar-tab-size: clamp(20px, 3vw, 32px);
+    --top-bar-tab-size: clamp(18px, 2vw, 28px);
     --top-bar-weight: 700;
     --top-bar-line-height: 1;
 }
-
+.arvo {
+    font-family: 'Arvo', serif;
+}
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
 .headerTitle {
+    font-family: "Arvo", serif;
     font-size: var(--header-title-size);
     font-weight: var(--header-title-weight);
     line-height: var(--header-title-line-height);
@@ -29,6 +35,7 @@
 }
 
 .topBarTabText {
+    font-family: "Arvo", serif;
     font-size: var(--top-bar-tab-size);
     font-weight: var(--top-bar-weight);
     line-height: var(--top-bar-line-height);

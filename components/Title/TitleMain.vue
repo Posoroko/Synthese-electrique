@@ -3,14 +3,17 @@ const props = defineProps({
     title: String,
     typeClass: String,
     line: Boolean,
-    leftPadding: String
+    leftPadding: String,
+    lineWidth: String
 })
 </script>
 
 <template>
-    <h2 class="titleResponsiveLeftPadding title" :class="[ typeClass, { 'line': line == true} ]">
-        {{ title }}
-    </h2>
+    <div class="flex">
+        <h2 class="titleResponsiveLeftPadding title bodyTitle arvo relative" :class="[typeClass, { 'line': line == true }]">
+            {{ title }}
+        </h2>
+    </div>
 </template>
 
 
@@ -18,8 +21,8 @@ const props = defineProps({
 .title.line::after {
     content: "";
     display: block;
-    width: 150px;
-    height: 6px;
+    width: max(40%, 70px);
+    height: 3px;
     background-color: var(--brand-color-2);
     margin-top: 5px;
 }

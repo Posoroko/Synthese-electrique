@@ -28,7 +28,7 @@
 
         <template v-slot:box2>
             <div class="frame centered">
-                <CustomImageBoxMain orientation="portrait" imageSrc="/images/eclairage-salle-de-restauration.webp" />
+                <CustomImageBoxMain orientation="portrait" imageSrc="/images/eclairage-salle-de-restauration.webp" frameSide="Left"/>
             </div>
         </template>
     </EdSectionMain>

@@ -9,7 +9,7 @@
             <div class="tarifDisc">
                 <h3>Forfait</h3>
 
-                <p class="pad20 textAlignCenter">Déplacement -15kms +1h de main d'oeuvre</p>
+                <p class="textAlignCenter">Déplacement {{ `< ` }}15kms <br> +1h de main d'oeuvre</p>
 
                 <p class="price">69€ HT</p>
             </div>
@@ -18,9 +18,9 @@
         <template v-slot:box2>
             <div class="tarifDisc">
                 <h3>Déplacement</h3>
-                <div>
-                    <p>-50kms = <span class="price">25€ HT</span></p>
-                    <p>+50kms = <span class="price">50€ HT</span></p>
+                <div class="marTop10">
+                    <p>{{ `< ` }}50kms = <span class="price">25€ HT</span></p>
+                    <p>{{ `> ` }}50kms = <span class="price">50€ HT</span></p>
                 </div>
             </div>
         </template>
@@ -28,13 +28,16 @@
         <template v-slot:box3>
             <div class="tarifDisc">
                 <h3>Main d’oeuvre</h3>
-                <p class="price">52€ HT/H</p>
+                <p class="price marTop20">52€ HT/H</p>
             </div>
         </template>
     </EdSectionMain>
 </template>
 
 <style scoped>
+.tarifDisc * {
+    font-family: 'Montserrat', sans-serif;
+}
 .tarifsSection {
     padding: 50px 0;
 }
@@ -50,19 +53,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     /* padding: 30px 20px; */
     gap: 20px;
+    padding-top: 50px;
 }
 .tarifDisc h3 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     padding: 1px 3px;
-    border-bottom: 3px solid var(--brand-color-2);
+    position: relative;
+}
+.tarifDisc h3::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    left: 50%;
+    top: 105%;
+    transform: translate(-50%, 0%);
+    background-color: var(--brand-color-2);
+    position: absolute;
 }
 p {
     font-size: 20px;
     font-weight: 500;
+    line-height: 1.5;
 }
 .price {
     font-size: 20px;

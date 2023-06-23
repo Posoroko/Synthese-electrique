@@ -24,7 +24,7 @@ contactLinks: [
     <nav class="topBar w100 flex justifyBetween alignCenter divided_20-60-20">
         <div class="topBarBox logoBox divided_childBox">
             <NuxtLink to="/" class="">
-                <img :src="topBarContent.logoUrl" class="logo" alt="Logo synthèse électrique">
+                <img :src="topBarContent.logoUrl" class="logo pointer" alt="Logo synthèse électrique">
             </NuxtLink>
         </div>
 
@@ -60,7 +60,33 @@ contactLinks: [
 
 
 .logo {
-    height: 100px;
+    height: 110px;
+}
+.logo:hover {
+    animation-name: move;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes move {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    20% {
+        transform: translate(10px, 0px);
+    }
+    40% {
+        transform: translate(-7.5px, 0px);
+    }
+    60% {
+        transform: translate(5px, 0px);
+    }
+    80% {
+        transform: translate(-2.5px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
 }
 .topBar {
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, var(--brand-color-1) 100%);

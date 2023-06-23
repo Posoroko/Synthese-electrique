@@ -22,7 +22,7 @@ const swapImage = (e) => {
 
         <template v-slot:box1>
             <div class="full centered marTop20">
-                <CustomImageBoxMain :imageSrc="`/images/${collection}/large/${images[counter].url}`" :imageAlt="images[counter].alt" />
+                <CustomImageBoxMain :imageSrc="`/images/${collection}/large/${images[counter].url}`" :imageAlt="images[counter].alt" frameSide="Right" />
             </div>
         </template>
 

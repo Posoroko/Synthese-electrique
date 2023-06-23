@@ -4,10 +4,10 @@
             <div class="titleFrame">
                 <FooterSchedule />
             </div>
-            <p class="bodyText2">du lundi au vendredi</p>
-            <p class="bodyText2">de 8h30 à 18h30</p>
-            <p class="bodyText2">et le samedi (appel</p>
-            <p class="bodyText2">uniquement ) de 9h à 12h.</p>
+            <p class="scheduleText">Du lundi au vendredi</p>
+            <p class="scheduleText">de 8h30 à 18h30</p>
+            <p class="scheduleText">et le samedi (appel</p>
+            <p class="scheduleText">uniquement ) de 9h à 12h.</p>
         </div>
     </div>
 </template>
@@ -17,13 +17,18 @@
     padding: 30px;
 } 
 .frame {
-    padding: 10px 30px;
+    padding: 10px 30px 30px 30px;
     border: 2px solid var(--brand-color-2);
 }
 .titleFrame {
     width: 100%;
     height: 100px;
     position: relative;
+}
+.scheduleText {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
 }
 .titleFrame svg {
     background-color: white;

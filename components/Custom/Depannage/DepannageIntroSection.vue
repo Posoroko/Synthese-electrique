@@ -24,7 +24,7 @@
 
         <template v-slot:box2>
             <div class="frame centered">
-                <CustomImageBoxMain orientation="portrait" imageSrc="/images/mauvais-controle-1-600.webp" />
+                <CustomImageBoxMain orientation="portrait" imageSrc="/images/mauvais-controle-1-600.webp" frameSide="Left" />
             </div>
         </template>
     </EdSectionMain>

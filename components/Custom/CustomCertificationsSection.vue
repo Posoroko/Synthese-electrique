@@ -8,17 +8,17 @@ const certifications = [
     {
         imageUrl: '/images/certifications/qualifelec.webp',
         imageAlt: 'Qualifelec',
-        linkUrl: 'ttps://www.qualifelec.fr/'
+        linkUrl: 'https://www.qualifelec.fr/'
     }
     , {
         imageUrl: '/images/certifications/maaf-pro-2023.webp',
         imageAlt: 'Artisan référence - MAAF',
-        linkUrl: '#'
+        linkUrl: null
     },
     {
         imageUrl: '/images/certifications/silverbat.webp',
         imageAlt: 'Handibat',
-        linkUrl: 'tps://silverbat.handibat.info/'
+        linkUrl: 'https://silverbat.handibat.info/'
     },
     {
         imageUrl: '/images/certifications/faciliti.webp',
@@ -46,7 +46,7 @@ const certifications = [
 
         <template v-slot:box1>
             <div class="w100 flex alignCenter justifyCenter wrap gap30 pad20">
-                <a class="certifLink pointer" v-for="(certif, index) in certifications" :key="index" :href="certif.linkUrl" target="_blank">
+                <a class="certifLink " :class="{'pointer' : certif.linkUrl }" v-for="(certif, index) in certifications" :key="index" :href="certif.linkUrl" target="_blank">
                     <img class="w100 certifImage" :src="certif.imageUrl" :alt="certif.imageAlt">
                 </a>
             </div>
@@ -66,7 +66,12 @@ const certifications = [
 }
 .certifLink{
     width: calc(100% / 7);
-    
+    rotate: 0deg;
+    transition: 100ms ease;
 }
-
+.certifLink.pointer:hover{
+    width: calc(100% / 7);
+    rotate: 2.5deg;
+    transition: 100ms ease;
+}
 </style>

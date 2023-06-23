@@ -12,15 +12,13 @@
         </template>
 
         <template v-slot:box2>
-            <CustomImageBoxMain orientation="landscape" imageSrc="/images/wall-600-100q.webp" />
+            <CustomImageBoxMain orientation="landscape" imageSrc="/images/wall-600-100q.webp" frameSide="Left"/>
         </template>
     </EdSectionMain>
 </template>
 
 <style scoped>
-.mapSection {
-    padding: 80px 0;
-}
+
 
 .carte {
     width: min(500px, 100%);

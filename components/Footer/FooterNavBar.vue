@@ -25,6 +25,12 @@
 </template>
 
 <style scoped>
+.linkText * {
+    font-family: 'Montserrat', sans-serif;
+}
+.linkText:hover {
+    color: var(--brand-color-2);
+}
 a {cursor: pointer;}
 .footerNavBar {
     color: white;
@@ -36,5 +42,8 @@ a {cursor: pointer;}
 }
 .linkText {
     border-bottom: 1px solid white;
+}
+.linkText:hover {
+    border-bottom: 1px solid var(--brand-color-2);
 }
 </style>

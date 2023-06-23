@@ -60,6 +60,7 @@ const flipBurger = () => {
 }
 .burgerMenu {
     flex-grow: 1;
+    padding: 0 50px;
 }
 .burgerTabBox {
     background-color: #fff;

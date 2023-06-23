@@ -21,7 +21,7 @@
 
         <template v-slot:box2>
             <div class="frame centered">
-                <CustomImageBoxMain orientation="portrait" imageSrc="/images/vmc.webp" />
+                <CustomImageBoxMain orientation="portrait" imageSrc="/images/vmc.webp" frameSide="Left" />
             </div>
         </template>
     </EdSectionMain>

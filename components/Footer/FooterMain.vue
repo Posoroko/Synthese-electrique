@@ -22,7 +22,7 @@
 
 <style scoped>
 footer .mainWidth {
-    padding: 50px 0 ;
+    padding: 50px 20px ;
 }
 footer .mainWidth div {
     margin-top: 50px;

@@ -8,23 +8,23 @@
         <img class="w100 imagePortrait" src="/images/ampoule/ampoule-square.jpg" alt="">
 
         <div class="headerTextContainer">
-            <TitleMain class="headerTitle" title="Synthèse électrique" :line="true" />
+            <TitleMain class="headerTitle" title="Synthese electric" :line="true" />
 
-            <ul class="headerText marTop20">
+            <ul class="headerUl headerText marTop20">
                 <li>
-                    - Installation électrique neuf et rénovation.
+                    <span>-</span> Installation électrique neuf et rénovation.
                 </li>
 
                 <li>
-                    - Mise en sécurité électrique.
+                    <span>-</span> Mise en sécurité électrique.
                 </li>
 
                 <li>
-                    - Dépannage - Entretien.
+                    <span>-</span> Dépannage - Entretien.
                 </li>
 
                 <li>
-                    - Etude thermique, chauffage électrique et ventilation du bâtiment.
+                    <span>-</span> Etude thermique, chauffage électrique et ventilation du bâtiment.
                 </li>
             </ul>
         </div>
@@ -73,5 +73,9 @@ header img {
   .imagePortrait {
     display: none;
   }
+}
+.headerUl li {
+    display: flex;
+    gap: 5px;
 }
 </style>

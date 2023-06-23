@@ -3,12 +3,14 @@
         // orientation: String,
         options: ['portrait', 'landscape'],
         imageSrc: String,
-        imageAlt: String
+        imageAlt: String,
+        frameSide: String
+        // right or left
     })
 </script>
 
 <template>
-    <div class="imageBox centered">
+    <div class="imageBox centered" :class="`frameTo${frameSide}`">
         <!-- <div class="wireframe"></div> -->
         <div class="frame relative">
             <img class="" :src="imageSrc" :alt="imageAlt">
@@ -17,11 +19,6 @@
 </template>
 
 <style scoped>
-
-.imageBox {
-    padding: 0 0 20px 20px;
-    position: relative;
-}
 .imageBox {
     width: min(90%, 90vw);
     height: min(500px, 90vw);
@@ -45,9 +42,13 @@ img {
     height: 100%;
     position: absolute;
     bottom: -20px;
-    left: -20px;
     border: 3px solid var(--brand-color-2);
     z-index: -1;
 }
-
+.imageBox.frameToLeft .frame::after {
+    left: -20px;
+}
+.imageBox.frameToRight .frame::after  {
+    right: -20px;
+}
 </style>

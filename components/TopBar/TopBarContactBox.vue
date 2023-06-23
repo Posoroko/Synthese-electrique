@@ -31,7 +31,8 @@ function handleHover(e) {
         if(telNumBoxIsOpen) telNumBoxIsOpen.value = false
         return
     }
-    
+    telNumBoxIsOpen.value = false
+    maelCarhaixIsOpen.value = false
 }
 
 
@@ -39,7 +40,7 @@ function handleHover(e) {
 </script>
 
 <template>
-    <div class="socialBoxMobile topBarBox socialBox  alignCenter justifyCenter gap20 relative">
+    <div class="socialBoxMobile topBarBox socialBox r alignCenter justifyCenter relative">
         <div class="topBarContactIcon icon callButtonTell pointer" @click="handleHover" data-target="telephone">call</div>
 
         <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
@@ -57,8 +58,8 @@ function handleHover(e) {
         <a class="topBarContactIcon icon pointer" href="#footerAddress">location_on</a>
     </div>
 
-    <div class="socialBoxDesktop topBarBox socialBox  alignCenter justifyCenter gap20 relative">
-        <div class="topBarContactIcon icon callButtonTell" @mouseenter="handleHover" data-target="telephone">call</div>
+    <div class="socialBoxDesktop topBarBox socialBox  alignCenter justifyCenter relative">
+        <div class="topBarContactIcon icon callButtonTell" @mouseenter="handleHover" @mouseleave="handleHover" data-target="telephone">call</div>
 
         <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
             <a class=" appearingButton" href="#">
@@ -72,7 +73,7 @@ function handleHover(e) {
 
         <a class="topBarContactIcon icon pointer" href="mailto:synthese-electrique@outlook.fr" rel="noopener noreferrer">alternate_email</a>
 
-        <a class="topBarContactIcon locationHoverable icon" href="#" @mouseenter="handleHover" data-target="location">location_on</a>
+        <a class="topBarContactIcon locationHoverable icon" href="#" @mouseenter="handleHover" @mouseleave="handleHover" data-target="location">location_on</a>
 
         <p class="appearingButton location" v-if="maelCarhaixIsOpen"> <span class="icon">location_on</span> Maël-Carhaix</p>
     </div>
@@ -81,6 +82,10 @@ function handleHover(e) {
 <style scoped>
 * {
     user-select: none;
+}
+.socialBox {
+    flex-wrap: wrap;
+    gap: clamp(5px, 3vw, 20px);
 }
 .telNumBox {
     position: absolute;

@@ -2,7 +2,7 @@ export const imagesInstallation = [
     {
         id: 0,
         url: 'coffret-et-installation-vétuste-aprés.webp',
-        alt: "Remplacement d’un coffret vétuste et création d’un espace technique au soussol d’un logement."
+        alt: "Remplacement d’un coffret vétuste et création d’un espace technique au sous-sol d’un logement."
     },
     {
         id: 1,
