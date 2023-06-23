@@ -65,12 +65,11 @@ const certifications = [
     padding: 80px 0;
 }
 .certifLink{
-    width: calc(100% / 7);
+    width: max(calc(100% / 7), 100px);
     rotate: 0deg;
     transition: 100ms ease;
 }
 .certifLink.pointer:hover{
-    width: calc(100% / 7);
     rotate: 2.5deg;
     transition: 100ms ease;
 }

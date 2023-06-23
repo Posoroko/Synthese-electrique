@@ -26,7 +26,7 @@
     position: relative;
 }
 .scheduleText {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
 }
@@ -36,6 +36,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 160%;
+    width: min(160%, 80vw);
 }
 </style>

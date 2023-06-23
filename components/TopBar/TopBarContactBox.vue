@@ -40,7 +40,7 @@ function handleHover(e) {
 </script>
 
 <template>
-    <div class="socialBoxMobile topBarBox socialBox r alignCenter justifyCenter relative">
+    <div class="socialBoxMobile topBarBox socialBox alignCenter justifyCenter relative">
         <div class="topBarContactIcon icon callButtonTell pointer" @click="handleHover" data-target="telephone">call</div>
 
         <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">

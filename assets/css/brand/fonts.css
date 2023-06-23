@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
 
 :root {
-    --header-text-size: 20px;
+    --header-text-size: clamp(16px, 2vw, 20px);
     --header-text-weight: 400;
     --header-text-line-height: 1.5;
 
