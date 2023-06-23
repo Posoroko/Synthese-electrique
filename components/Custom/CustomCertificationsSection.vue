@@ -46,8 +46,8 @@ const certifications = [
 
         <template v-slot:box1>
             <div class="w100 flex alignCenter justifyCenter wrap gap30 pad20">
-                <a class="certifLink " :class="{'pointer' : certif.linkUrl }" v-for="(certif, index) in certifications" :key="index" :href="certif.linkUrl" target="_blank">
-                    <img class="w100 certifImage" :src="certif.imageUrl" :alt="certif.imageAlt">
+                <a class="certifLink centered" :class="{'pointer' : certif.linkUrl }" v-for="(certif, index) in certifications" :key="index" :href="certif.linkUrl" target="_blank">
+                    <img class="certifImage" :src="certif.imageUrl" :alt="certif.imageAlt">
                 </a>
             </div>
         </template>
@@ -66,19 +66,22 @@ const certifications = [
 }
 .certifLink{
     width: max(calc(100% / 7), 100px);
-    
+    height: 150px;
     rotate: 0deg;
     transition: 100ms ease;
 }
 .certifImage {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
 }
 .certifLink:nth-child(1){
-    border-radius: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 500px;
 }
-.certifLink.pointer:hover{
+.certifLink:nth-child(1) img{
+    border-radius: 500px;
+}
+.certifLink.pointer:hover img{
     /* rotate: 2.5deg; */
     scale: 1.02;
     box-shadow: 0 0 20px 5px rgb(0, 0, 0);

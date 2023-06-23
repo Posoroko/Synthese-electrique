@@ -39,6 +39,6 @@ export const imagesChauffage = [
         id: 6,
         title: "Ventilation du bâtiment",
         url: 'vmc-vetuste-avant-apres.webp',
-        alt: "Remplacement VMC simple flux (avant-après)"
+        alt: "Remplacement VMC simple flux"
     }
 ]

@@ -30,6 +30,7 @@
 }
 
 .headerText {
+    font-family: 'Montserrat', sans-serif;
     font-size: var(--header-text-size);
     font-weight: var(--header-text-weight);
     line-height: var(--header-text-line-height);
