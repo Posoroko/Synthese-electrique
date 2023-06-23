@@ -74,14 +74,44 @@ header img {
 .headerTextContainer {
     position: absolute;
     top: 50%;
-    right: 5%;
+    
     translate: 0% -50%;
-    width: min(750px, 90%);
+    width: min(750px, 75%);
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.342);
     border-radius: 20px;
     backdrop-filter: blur(3px);
 }
+@media (orientation: landscape) {
+    @media (max-width: 1024px) {
+        .headerTextContainer {
+            width: 65%;
+        }
+    }
+    .headerTextContainer {
+        right: 0%;
+    }
+}
+@media (orientation: portrait){
+    @media (max-width: 1024px) {
+        .headerTextContainer {
+            right: 0%;
+            width: 60%;
+        }
+        
+    }
+    @media (max-width: 500px) {
+        .headerTextContainer {
+            right: 0%;
+            width: 75%;
+        }
+        
+    }
+}
+
+
+
+
 .headerTextContainer * {
     color: white;
 }

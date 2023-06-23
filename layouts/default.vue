@@ -14,8 +14,7 @@
 
 <style scoped>
 .topFrame {
-    /* height: max(600px, 100vh); */
-    height: 100vh;
+    height: min(100vh, 1080px);
 }
 main {
     min-height: 100vh;
