@@ -16,7 +16,8 @@ watch(() => route.path, (path) => {
         <img class="w100 imagePortrait" src="/images/ampoule/ampoule-square.jpg" alt="">
 
         <div class="headerTextContainer">
-            <TitleMain class="headerTitle" title="Synthese electric" :line="true" />
+            <!-- <TitleMain class="headerTitle" title="Synthese electric" :line="true" /> -->
+            <h2 class="headerTitle">SYNTHESE ELECTRIC</h2>
 
             <ul class="headerUl headerText marTop20">
                 <li>
@@ -39,7 +40,18 @@ watch(() => route.path, (path) => {
     </header>
 </template>
 
-<style>
+<style scoped>
+h2, li{
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+.headerTitle::after {
+    content: "";
+    display: block;
+    width: max(40%, 70px);
+    height: 3px;
+    background-color: var(--brand-color-2);
+    margin-top: 5px;
+}
 header {
     flex-grow: 1;
     overflow: hidden;
@@ -78,7 +90,7 @@ header img {
     translate: 0% -50%;
     width: min(750px, 75%);
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.342);
+    /* background-color: rgba(0, 0, 0, 0.342); */
     border-radius: 20px;
     backdrop-filter: blur(3px);
 }
