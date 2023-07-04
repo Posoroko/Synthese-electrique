@@ -47,7 +47,7 @@ h2, li {
 .headerTitle::after {
     content: "";
     display: block;
-    width: max(40%, 70px);
+    width: max(36%, 70px);
     height: 3px;
     background-color: var(--brand-color-2);
     margin-top: 5px;
