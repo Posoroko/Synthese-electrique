@@ -3,7 +3,7 @@
 
 
 :root {
-    --header-text-size: clamp(20px, 3vw, 32px);
+    --header-text-size: clamp(20px, 3vw, 28px);
     --header-text-weight: 600;
     --header-text-line-height: 1.3;
 
