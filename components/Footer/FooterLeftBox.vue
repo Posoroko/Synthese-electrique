@@ -30,7 +30,7 @@
 
 <style scoped>
 .addressList li {
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(15px, 3vw, 20px);
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
