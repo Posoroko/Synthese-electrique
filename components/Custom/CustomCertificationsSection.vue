@@ -86,7 +86,7 @@ const certifications = [
 .certifLink.pointer:hover img{
     /* rotate: 2.5deg; */
     scale: 1.02;
-    box-shadow: 0 0 20px 5px rgb(0, 0, 0);
+    box-shadow: 0 0 10px 10px rgb(0, 0, 0);
     transition: 100ms ease;
 }
 </style>

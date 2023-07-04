@@ -95,13 +95,18 @@ header img {
     backdrop-filter: blur(3px);
 }
 @media (orientation: landscape) {
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
         .headerTextContainer {
-            width: 65%;
+            right: 0;
+            width: 75%;
         }
     }
-    .headerTextContainer {
-        right: 0%;
+
+    @media (min-width: 1024px) {
+        .headerTextContainer {
+            left: 50%;
+            width: 50%;
+        }
     }
 }
 @media (orientation: portrait){
