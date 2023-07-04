@@ -17,13 +17,13 @@ const props = defineProps({
 <template>
     <section class="w100" :class="[colorMode, ...customStyles]">
         <div class="sidePadding">
-            <div class="sectionContainer" :class="[widthClass]">
+            <div class="sectionContainer " :class="[widthClass]">
                 <div v-if="title" class="titleBox">
                     <TitleMain class="bodyTitle" :title="title" :line="true" />
                 </div>
 
                 <div class="boxContainer flex justifyCenter alignCenter" :class="[wrapModeClass]">
-                    <div class="sectionBox flex column justifyCenter alignCenter" v-for="n in boxes" :key="n">
+                    <div class="sectionBox flex column justifyCenter  alignCenter" v-for="n in boxes" :key="n">
                         <slot :name="`box${n}`"></slot>
                     </div>
                 </div>

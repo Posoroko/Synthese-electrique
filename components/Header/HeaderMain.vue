@@ -41,8 +41,8 @@ watch(() => route.path, (path) => {
 </template>
 
 <style scoped>
-h2, li{
-    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+h2, li {
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 .headerTitle::after {
     content: "";
@@ -137,6 +137,10 @@ header img {
     font-size: clamp(18px, 3vw, 24px);
     font-family: 'Montserrat', sans-serif;
 } */
+
+.imagePortrait {
+    filter: brightness(0.7);
+}
 @media (orientation: portrait) {
   .imageLandscape {
     display: none;

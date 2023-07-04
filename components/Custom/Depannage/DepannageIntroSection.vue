@@ -36,7 +36,7 @@
     margin: auto;
 }
 .frame {
-    height: 500px;
+    /* min-height: 70vh; */
     width: 100%;
 }
 ul {

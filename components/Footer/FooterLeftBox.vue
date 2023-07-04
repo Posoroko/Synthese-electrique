@@ -5,7 +5,15 @@
         </div>
 
         <ul class="addressList flex column gap20 "> 
-            <li class="flex alignCenter gap10 "> <span class="icon">call</span> 02 56 43 11 50 - 06 16 61 49 97</li> 
+            <!-- <li class="flex alignCenter gap10 "> <span class="icon">call</span> 02 56 43 11 50 - 06 16 61 49 97</li>  -->
+            
+            <li>
+                <span class="flex alignCenter gap10 pointer mailLink" href="tel:0616614997">
+                    <span class="icon">call</span> 
+                    <a href="tel:0256431150">02 56 43 11 50</a> - 
+                    <a href="tel:0616614997">06 16 61 49 97</a>
+                </span>
+            </li>
 
             <li>
                 <a class="flex alignCenter gap10 pointer mailLink" href="mailto:synthese-electric@outlook.fr">
@@ -22,7 +30,7 @@
 
 <style scoped>
 .addressList li {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;

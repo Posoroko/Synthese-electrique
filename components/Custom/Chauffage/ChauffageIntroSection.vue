@@ -34,8 +34,9 @@
 }
 
 .frame {
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
+    flex-grow: none;
 }
 
 ul {

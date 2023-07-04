@@ -49,9 +49,8 @@ const flipBurger = () => {
     overflow: visible;
 }
 .burgerIcon{
-    height: 60px;
-    width: 60px;
-    font-size: 40px;
+    font-size: clamp(20px, 4vw, 30px);
+    line-height: 1em;
     color: var(--brand-color-1);
     background-color: #fff;
     padding: 10px;

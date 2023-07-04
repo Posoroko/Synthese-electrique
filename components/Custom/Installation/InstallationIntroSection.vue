@@ -41,7 +41,7 @@
 }
 
 .frame {
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
 }
 

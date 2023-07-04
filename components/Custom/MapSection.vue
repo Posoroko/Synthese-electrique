@@ -18,7 +18,7 @@
 
 <style scoped>
 .mapSection{
-    padding: 80px 0;
+    padding: 20px 0;
 }
 .carte {
     width: min(500px, 100%);

@@ -4,7 +4,7 @@
 
 <template>
     <EdSectionMain title="Tarifs" class="tarifsSection" widthClass="mainWidth" :customStyles="['clothPattern']"
-        colorMode="dark" :boxes="3" boxMinWidth="250px" gap="20px" wrapModeClass="wrap">
+        colorMode="dark" :boxes="3" boxMinWidth="250px" gap="40px" wrapModeClass="wrap">
         <template v-slot:box1>
             <div class="tarifDisc">
                 <h3>Forfait</h3>

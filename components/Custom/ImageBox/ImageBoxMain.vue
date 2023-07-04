@@ -21,11 +21,11 @@
 <style scoped>
 .imageBox {
     width: min(90%, 90vw);
-    height: min(500px, 90vw);
+    /* height: min(500px, 60vw); */
 }
 .frame {
     max-width: 100%;
-    max-height: 100%;
+    /* max-height: 100%; */
     isolation: isolate;
 }
 img {

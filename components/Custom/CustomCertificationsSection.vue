@@ -65,7 +65,7 @@ const certifications = [
     padding: 80px 0;
 }
 .certifLink{
-    width: max(calc(100% / 7), 100px);
+    width: max(calc(100% / 7), 150px);
     height: 150px;
     rotate: 0deg;
     transition: 100ms ease;
@@ -82,9 +82,13 @@ const certifications = [
 }
 .certifLink:nth-child(1) img{
     border-radius: 500px;
+    
+}
+.certifLink.pointer img{
+    box-shadow: 0 0 7px 7px rgb(0, 0, 0);
+    transition: 100ms ease;
 }
 .certifLink.pointer:hover img{
-    /* rotate: 2.5deg; */
     scale: 1.02;
     box-shadow: 0 0 10px 10px rgb(0, 0, 0);
     transition: 100ms ease;

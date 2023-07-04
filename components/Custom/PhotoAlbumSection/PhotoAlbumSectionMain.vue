@@ -48,7 +48,7 @@ const swapImage = (e) => {
     text-transform: uppercase;
 }
 .photoAlbumSection{
-    padding: 80px 0;
+    padding: 50px 0;
 }
 .thumbnail {
     width: clamp(50px, 10vw, 100px);
