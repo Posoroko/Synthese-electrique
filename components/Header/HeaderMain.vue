@@ -92,7 +92,7 @@ header img {
     padding: 30px;
     /* background-color: rgba(0, 0, 0, 0.342); */
     border-radius: 20px;
-    backdrop-filter: blur(3px);
+    /* backdrop-filter: blur(3px); */
 }
 @media (orientation: landscape) {
     @media (max-width: 1023px) {
@@ -140,6 +140,9 @@ header img {
 
 .imagePortrait {
     filter: brightness(0.7);
+}
+.imageLandscape {
+    filter: brightness(1);
 }
 @media (orientation: portrait) {
   .imageLandscape {
