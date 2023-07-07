@@ -21,9 +21,7 @@
 </template>
 
 <style scoped>
-footer {
-    min-height: 100vh;
-}
+
 footer .mainWidth {
     padding: 50px 20px ;
 }
