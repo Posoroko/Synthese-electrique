@@ -33,7 +33,7 @@ watch(() => route.path, (path) => {
                 </li>
 
                 <li>
-                    <span>-</span> Etude thermique des locaux existant, chauffage électrique et ventilation du bâtiment.
+                    <span>-</span> Etude thermique des locaux existants, chauffage électrique et ventilation du bâtiment.
                 </li>
             </ul>
         </div>

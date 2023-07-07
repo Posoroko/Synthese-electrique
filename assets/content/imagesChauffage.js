@@ -13,15 +13,15 @@ export const imagesChauffage = [
     },
     {
         id: 2,
-        title: "Chauffage électrique",
+        title: "Ventilation du bâtiment",
         url: 'remplacement-de-VMC-2.webp',
-        alt: "Installation d’un chauffage électrique sèche-serviette classique avec soufflerie."
+        alt: "Redimensionnement, remplacement VMC, et entretien des réseaux existants."
     },
     {
         id: 3,
-        title: "Ventilation du bâtiment",
+        title: "Chauffage électrique",
         url: 'seche-serviette-chaleur-douce-soufflerie-installation.webp',
-        alt: "Redimensionnement, remplacement VMC, et entretien des réseaux existants."
+        alt: "Installation d’un chauffage électrique sèche-serviette classique avec soufflerie."
         
     },
     {

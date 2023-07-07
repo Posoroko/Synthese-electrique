@@ -1,7 +1,7 @@
 export const imagesInstallation = [
     {
         id: 0,
-        title: "Mise en sécurité",
+        title: "installation électrique",
         url: 'coffret-et-installation-vétuste-aprés.webp',
         alt: "Création d'un espace technique."
     },
@@ -51,7 +51,7 @@ export const imagesInstallation = [
         id:  8,
         title: "Installation électrique",
         url: 'mise-en-place-encastrée-pour-cuisine-equipée.webp',
-        alt: "Installation électrique encastrée en maçonnerie."
+        alt: "Installation encastrée électrique en maçonnerie."
     },
     {
         id:  9,
