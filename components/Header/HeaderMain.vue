@@ -33,7 +33,7 @@ watch(() => route.path, (path) => {
                 </li>
 
                 <li>
-                    <span>-</span> Etude thermique, chauffage électrique et ventilation du bâtiment.
+                    <span>-</span> Etude thermique des locaux existant, chauffage électrique et ventilation du bâtiment.
                 </li>
             </ul>
         </div>
@@ -103,6 +103,9 @@ header img {
     }
 
     @media (min-width: 1024px) {
+        li {
+            width: 40ch;
+        }
         .headerTextContainer {
             left: 50%;
             width: 50%;

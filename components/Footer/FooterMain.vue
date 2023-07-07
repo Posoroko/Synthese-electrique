@@ -21,6 +21,9 @@
 </template>
 
 <style scoped>
+footer {
+    min-height: 100vh;
+}
 footer .mainWidth {
     padding: 50px 20px ;
 }
@@ -36,6 +39,13 @@ footer .mainWidth div {
 .footer-thirds-4-3-4 .mainWidth .centerBox {
     width: min(calc((var(--main-width-basis) - (2 * var(--main-width-padding))) * 0.25), 100%);
 }
+
+/* @media (min-width: 1080px) {
+    footer {
+        height: 150vh;
+    }
+} */
+
 
 @media (max-width: 1152px) {
     .leftBox {

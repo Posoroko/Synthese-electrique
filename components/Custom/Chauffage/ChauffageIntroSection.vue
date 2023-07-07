@@ -6,7 +6,7 @@
 
                 <div class="textFrame flex alignStart column">
                     <ul class="">
-                        <li class="bodyText1">Etude, dimensionnement et installation de chauffage électrique individuel, connecté et gestion centralisée.</li>
+                        <li class="bodyText1">Etude, dimensionnement et installation de chauffage électrique individuel, connecté et en gestion centralisée.</li>
                         <li class="bodyText1">Etude, dimensionnement et installation de ventilation résidentielle et tertiaire simple et double flux (VMC, VPI, VMR, VPH et naturelle).</li>
                         <li class="bodyText1">Entretien des réseaux de ventilation existants.</li>
                         <li class="bodyText1">...</li>

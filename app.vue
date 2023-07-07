@@ -4,7 +4,7 @@
 
 <template>
   <SeoKit />
-  <div id="siteBox" :class="colorMode" >
+  <div id="siteBox" class="" :class="colorMode" >
     <NuxtLayout />
   </div>
   

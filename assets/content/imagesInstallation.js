@@ -3,13 +3,13 @@ export const imagesInstallation = [
         id: 0,
         title: "Mise en sécurité",
         url: 'coffret-et-installation-vétuste-aprés.webp',
-        alt: "Remplacement d’un coffret vétuste et création d’un espace technique au sous-sol d’un logement."
+        alt: "Création d'un espace technique."
     },
     {
         id: 1,
         title: "Mise en sécurité",
         url: 'coffret-vétuste-aprés-1.webp',
-        alt: "Dépose d’un coffret et installation d’un coffret de répartition ERT pour une salle des fêtes."
+        alt: "Remplacement d'un coffret de servitude ERT pour une salle des fêtes"."
     },
     {
         id: 2,
@@ -51,12 +51,12 @@ export const imagesInstallation = [
         id:  8,
         title: "Installation électrique",
         url: 'mise-en-place-encastrée-pour-cuisine-equipée.webp',
-        alt: "Installation encastrée en maçonnerie."
+        alt: "Installation électrique encastrée en maçonnerie."
     },
     {
         id:  9,
         title: "Installation électrique",
         url: 'répartition-boite-de-comble.webp',
-        alt: "Installation d’une boîte de répartiition dans des combles."
+        alt: "Installation d’une boîte de répartition dans des combles."
     },
 ]
