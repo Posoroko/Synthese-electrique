@@ -9,7 +9,7 @@ export const imagesInstallation = [
         id: 1,
         title: "Mise en sécurité",
         url: 'coffret-vétuste-aprés-1.webp',
-        alt: "Remplacement d'un coffret de servitude ERT pour une salle des fêtes"."
+        alt: "Remplacement d'un coffret de servitude ERT pour une salle des fêtes."
     },
     {
         id: 2,
