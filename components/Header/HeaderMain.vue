@@ -19,7 +19,7 @@ watch(() => route.path, (path) => {
             <!-- <TitleMain class="headerTitle" title="Synthese electric" :line="true" /> -->
             <h2 class="headerTitle">SYNTHESE ELECTRIC</h2>
 
-            <ul class="headerUl headerText marTop20">
+            <ul class="headerUl headerText marTop20 w100">
                 <li>
                     <span>-</span> Installation électrique neuf et rénovation.
                 </li>
@@ -32,7 +32,7 @@ watch(() => route.path, (path) => {
                     <span>-</span> Dépannage - Entretien.
                 </li>
 
-                <li>
+                <li class="">
                     <span>-</span> Etude thermique des locaux existants, chauffage électrique et ventilation du bâtiment.
                 </li>
             </ul>
@@ -84,15 +84,13 @@ header img {
     object-position: center;
 }
 .headerTextContainer {
+    width: 50%;
+    padding: 30px;
+    border-radius: 20px;
     position: absolute;
     top: 50%;
-    
     translate: 0% -50%;
-    width: min(750px, 75%);
-    padding: 30px;
-    /* background-color: rgba(0, 0, 0, 0.342); */
-    border-radius: 20px;
-    /* backdrop-filter: blur(3px); */
+    right: 0;
 }
 @media (orientation: landscape) {
     @media (max-width: 1023px) {
@@ -106,10 +104,7 @@ header img {
         li {
             width: 40ch;
         }
-        .headerTextContainer {
-            left: 50%;
-            width: 50%;
-        }
+
     }
 }
 @media (orientation: portrait){
@@ -158,6 +153,7 @@ header img {
   }
 }
 .headerUl li {
+    max-width: 85%;
     display: flex;
     gap: 5px;
 }
