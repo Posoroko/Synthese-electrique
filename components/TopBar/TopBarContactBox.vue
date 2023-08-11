@@ -2,20 +2,6 @@
 const telNumBoxIsOpen = ref(false)
 const maelCarhaixIsOpen = ref(false)
 
-document.addEventListener('scroll', () => {
-    if(telNumBoxIsOpen.value) telNumBoxIsOpen.value = false
-    if(maelCarhaixIsOpen.value) maelCarhaixIsOpen.value = false
-})
-document.addEventListener('click', (e) => {
-    if(telNumBoxIsOpen.value && !e.target.closest('.telNumBox') && !e.target.closest('.callButtonTell')) {
-        telNumBoxIsOpen.value = false
-        return
-    }
-    if (!e.target.closest('.maelCarhaix') && !e.target.closest('.locationHoverable') && maelCarhaixIsOpen.value) {
-        maelCarhaixIsOpen.value = false
-        return
-    }
-})
 
 function handleHover(e) {
     const target = e.currentTarget.dataset.target
@@ -35,6 +21,22 @@ function handleHover(e) {
     maelCarhaixIsOpen.value = false
 }
 
+onMounted(() => {
+    document.addEventListener('scroll', () => {
+        if (telNumBoxIsOpen.value) telNumBoxIsOpen.value = false
+        if (maelCarhaixIsOpen.value) maelCarhaixIsOpen.value = false
+    })
+    document.addEventListener('click', (e) => {
+        if (telNumBoxIsOpen.value && !e.target.closest('.telNumBox') && !e.target.closest('.callButtonTell')) {
+            telNumBoxIsOpen.value = false
+            return
+        }
+        if (!e.target.closest('.maelCarhaix') && !e.target.closest('.locationHoverable') && maelCarhaixIsOpen.value) {
+            maelCarhaixIsOpen.value = false
+            return
+        }
+    })
+})
 
 
 </script>

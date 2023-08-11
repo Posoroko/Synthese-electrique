@@ -1,23 +1,44 @@
 <script setup>
-import { topBarContent } from '@/assets/content/topBar.js'
+// import { topBarContent } from '@/assets/content/topBar.js'
 
-contactLinks: [
-    {
-        type: "telephone",
-        value: "06 00 00 00 00",
-        icon: "call"
-    },
-    {
-        type: "email",
-        value: "synthese-electrique@outlook.fr",
-        icon: "alternate_email"
-    },
-    {
-        type: "address",
-        value: "Maël-Carhaix",
-        icon: "location_on"
-    }
-] 
+
+const topBarContent = ref({
+    logoUrl: "/images/logo.png",
+    tabs: [
+        {
+            text: "Dépannage",
+            url: "/depannage"
+        },
+        {
+            text: "Installation <br> électrique",
+            url: "/installation-electrique"
+        },
+        {
+            text: "Chauffage <br> ventilation",
+            url: "/chauffage-et-ventilation"
+        }
+    ],
+    contactLinks: [
+        {
+            type: "telephone",
+            value: "06 00 00 00 00",
+            icon: "call"
+        },
+        {
+            type: "email",
+            value: "synthese-electrique@outlook.fr",
+            icon: "alternate_email"
+        },
+        {
+            type: "address",
+            value: "Maël-Carhaix",
+            icon: "location_on"
+        }
+    ]
+
+})
+
+
 </script>
 
 <template>
@@ -29,6 +50,7 @@ contactLinks: [
         </div>
 
         <TopBarTabBox :tabs="topBarContent.tabs" />
+
         <TopBarBurgerMenu :tabs="topBarContent.tabs" />
 
         <TopBarContactBox />

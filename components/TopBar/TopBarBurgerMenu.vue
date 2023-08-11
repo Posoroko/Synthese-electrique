@@ -7,15 +7,7 @@ const props = defineProps({
 
 const burgerIsOpen = ref(false)
 
-document.addEventListener('scroll', () => {
-    if(burgerIsOpen.value) burgerIsOpen.value = false
-})
-document.addEventListener('click', (e) => {
-    if (burgerIsOpen.value && !e.target.closest('.burgerIcon') && !e.target.closest('.topBarTab') && !e.target.closest('.burgerTabBox')) {
-        burgerIsOpen.value = false
-        return
-    }
-})
+
 
 const flipBurger = () => {
     if(!burgerIsOpen.value) {
@@ -26,6 +18,17 @@ const flipBurger = () => {
         burgerIsOpen.value = false
     }
 }
+onMounted(() => {
+    document.addEventListener('scroll', () => {
+        if (burgerIsOpen.value) burgerIsOpen.value = false
+    })
+    document.addEventListener('click', (e) => {
+        if (burgerIsOpen.value && !e.target.closest('.burgerIcon') && !e.target.closest('.topBarTab') && !e.target.closest('.burgerTabBox')) {
+            burgerIsOpen.value = false
+            return
+        }
+    })
+})
 
 </script>
 
