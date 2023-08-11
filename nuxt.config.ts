@@ -43,10 +43,10 @@ export default defineNuxtConfig({
                     name: 'og:description',
                     content: '%siteDescription',
                 },
-                // {
-                //     name: 'og:image',
-                //     content: '/favicon/miles_og_image_1200x630.png',
-                // },
+                {
+                    name: 'og:image',
+                    content: '/favicon/synthese-electric-1200x630.webp',
+                },
                 {
                     name: 'og:url',
                     content: '%siteUrl',
