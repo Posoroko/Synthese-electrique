@@ -45,7 +45,7 @@ footer .mainWidth div {
 } */
 
 
-@media (max-width: 1152px) {
+@media (max-width: 1359px) {
     .leftBox {
         order: 1;
     }
@@ -56,7 +56,7 @@ footer .mainWidth div {
         order: 2;
     }
 }
-@media (max-width: 880px) {
+@media (max-width: 1021px) {
     .leftBox {
         order: 1;
     }
