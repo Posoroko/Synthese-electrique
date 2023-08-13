@@ -12,9 +12,12 @@ watch(() => route.path, (path) => {
 
 <template>
     <header class="relative" :class="{ 'flash': flash }">
-        <img class="w100 imageLandscape" src="/images/ampoule/ampoule-large.jpg" alt="">
-        <img class="w100 imagePortrait" src="/images/ampoule/ampoule-square.jpg" alt="">
+        <picture>
+            <source srcset="/images/ampoule/ampoule-square.webp" media="(orientation: portrait)">
 
+            <img class="w100 imageLandscape" src="/images/ampoule/ampoule-large.webp" alt="">
+        </picture>
+        
         <div class="headerTextContainer">
             <!-- <TitleMain class="headerTitle" title="Synthese electric" :line="true" /> -->
             <h2 class="headerTitle">SYNTHESE ELECTRIC</h2>
@@ -142,16 +145,7 @@ header img {
 .imageLandscape {
     filter: brightness(1);
 }
-@media (orientation: portrait) {
-  .imageLandscape {
-    display: none;
-  }
-}
-@media (orientation: landscape) {
-  .imagePortrait {
-    display: none;
-  }
-}
+
 .headerUl li {
     max-width: 85%;
     display: flex;
