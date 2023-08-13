@@ -13,7 +13,7 @@ const certifications = [
     , {
         imageUrl: '/images/certifications/maaf-pro-2023.webp',
         imageAlt: 'Artisan référence - MAAF',
-        linkUrl: null
+        linkUrl: '#certifications'
     },
     {
         imageUrl: '/images/certifications/silverbat.webp',
@@ -45,7 +45,7 @@ const certifications = [
         :bottomSlot="true">
 
         <template v-slot:box1>
-            <div class="w100 flex alignCenter justifyCenter wrap gap30 pad20">
+            <div class="w100 flex alignCenter justifyCenter wrap gap30 pad20" id="certifications">
                 <a class="certifLink flex alignCenter justifyCenter" :class="{'pointer' : certif.linkUrl }" v-for="(certif, index) in certifications" :key="index" :href="certif.linkUrl" target="_blank">
                     <img class="certifImage" :src="certif.imageUrl" :alt="certif.imageAlt">
                 </a>
