@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     runtimeConfig: {
         public: {
-            siteUrl: "https://syntheseelectric.fr",
+            siteUrl: "https://synthese-electric.fr",
             siteName: 'Synthèse électric, électricien à Maël-Carhaix.',
             siteDescription: "Nous vous accompagnons au quotidien dans vos travaux d’installation, de rénovation et de dépannage de votre installation électrique.",
             language: 'fr-FR',
