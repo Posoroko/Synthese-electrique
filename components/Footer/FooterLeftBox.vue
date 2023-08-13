@@ -9,7 +9,9 @@
             
             <li>
                 <span class="flex alignCenter gap10 pointer mailLink" href="tel:0616614997">
-                    <span class="icon">call</span> 
+                    <span class="iconBox">
+                        <Icon name="call" color="var(--brand-color-2)" />
+                    </span>
                     <a href="tel:0256431150">02 56 43 11 50</a> - 
                     <a href="tel:0616614997">06 16 61 49 97</a>
                 </span>
@@ -17,22 +19,28 @@
 
             <li>
                 <a class="flex alignCenter gap10 pointer mailLink" href="mailto:synthese-electric@outlook.fr">
-                    <span class="icon">alternate_email</span> synthese-electric@outlook.fr
+                    <span class="iconBox">
+                        <Icon name="email" color="var(--brand-color-2)" />
+                    </span> synthese-electric@outlook.fr
                 </a>
             </li> 
 
             <li class="flex alignCenter gap10">
-                <span class="icon">location_on</span> Maël-Carhaix
+                <span class="iconBox">
+                    <Icon name="location" color="var(--brand-color-2)" />
+                </span> Maël-Carhaix
             </li> 
         </ul>
     </address>
 </template>
 
 <style scoped>
+.iconBox {
+    height: 36px;
+}
 .addressList li {
     font-size: clamp(15px, 3vw, 20px);
-    font-weight: 500;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat-700", sans-serif;
     font-weight: 700;
 }
 .addressList li .icon {

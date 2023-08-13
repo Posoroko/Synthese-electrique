@@ -36,7 +36,7 @@
 
 <style scoped>
 .tarifDisc * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-400', sans-serif;
 }
 .tarifsSection {
     padding: 50px 0;
@@ -59,6 +59,7 @@
     padding-top: 50px;
 }
 .tarifDisc h3 {
+    font-family: 'Montserrat-700', sans-serif;
     font-size: 24px;
     font-weight: 700;
     padding: 1px 3px;

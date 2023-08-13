@@ -56,7 +56,7 @@ const props = defineProps({
     color: white;
     font-size: clamp(20px, 4vw, 24px);
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-700', sans-serif;
 }
 .serviceLink:hover div .buttonText {
     color: black;

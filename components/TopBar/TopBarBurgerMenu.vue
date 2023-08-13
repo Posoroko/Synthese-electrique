@@ -34,7 +34,9 @@ onMounted(() => {
 
 <template>
     <div class="topBarBox burgerMenu centered relative">
-        <div class="icon burgerIcon pointer flex alignCenter" @click="flipBurger">menu</div>
+        <div class="burgerIcon pointer flex alignCenter" @click="flipBurger">
+            <Icon name="menu" color="var(--brand-color-1)" />
+        </div>
         
         <div class="burgerTabBox absolute flex" v-if="burgerIsOpen">
             <NuxtLink class="topBarTabText topBarTab flex alignCenter textAlignCenter pointer" :class="{ 'active' : route.path == tab.url}" v-html="tab.text"
@@ -42,19 +44,23 @@ onMounted(() => {
 
             </NuxtLink>
 
-            <span class="icon closeButton absolute top0 right0 pad5 pointer" @click="flipBurger">close</span>
+            <span class="closeButton absolute top0 right0 pointer" @click="flipBurger">
+                <div class="h100 marTop10">
+                    <Icon name="close" color="black" />
+                </div>
+            </span>
         </div>
     </div>
 </template>
 
 <style scoped>
+
 .topBarBox {
     overflow: visible;
 }
 .burgerIcon{
-    font-size: clamp(20px, 4vw, 30px);
-    line-height: 1em;
-    color: var(--brand-color-1);
+    height: 48px;
+    width: 48px;
     background-color: #fff;
     padding: 10px;
     border-radius: 500px;
@@ -76,7 +82,7 @@ onMounted(() => {
     gap: 10px;
 }
 .closeButton {
-    font-size: 30px;
+    height: 30px;
 }
 @media (orientation : landscape) {
     .burgerTabBox {

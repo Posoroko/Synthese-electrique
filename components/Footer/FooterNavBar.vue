@@ -26,7 +26,7 @@
 
 <style scoped>
 .linkText * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-400', sans-serif;
 }
 .linkText:hover {
     color: var(--brand-color-2);

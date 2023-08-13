@@ -47,11 +47,11 @@ onMounted(() => {
 
         <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
             <a class="mobileCallButton appearingButton pointer" href="tel:0256431150">
-                <span class="icon">call</span><span class="montserrat">02 56 43 11 50</span>
+                <span class="icon"><Icon name="call" color="var(--brand-color-2)"></Icon> </span><span class="montserrat">02 56 43 11 50</span>
             </a>
 
             <a class="mobileCallButton appearingButton pointer" href="tel:0616614997">
-                <span class="icon">call</span><span class="montserrat">06 16 61 49 97</span>
+                <span class="icon">call</span><span class="montserrat-400">06 16 61 49 97</span>
             </a>
         </div>
 
@@ -61,23 +61,59 @@ onMounted(() => {
     </div>
 
     <div class="socialBoxDesktop topBarBox socialBox  alignCenter justifyCenter relative">
-        <div class="topBarContactIcon icon callButtonTell" @mouseenter="handleHover" @mouseleave="handleHover" data-target="telephone">call</div>
+        <div class="topBarContactIcon callButtonTell" @mouseenter="handleHover" @mouseleave="handleHover" data-target="telephone">
+            <div class="icon normal">
+                <Icon name="call" color="var(--brand-color-1)" />
+            </div>
+
+            <div class="icon hovered">
+                <Icon name="call" color="white" />
+            </div>
+        </div>
 
         <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
             <a class=" appearingButton" href="#">
-                <span class="icon">call</span><span class="montserrat">02 56 43 11 50</span>
+                <span class="iconBox">
+                    <Icon name="call" color="white" />
+                </span>
+                
+                <span class="montserrat">02 56 43 11 50</span>
             </a>
 
             <a class=" appearingButton" href="#">
-                <span class="icon">call</span><span class="montserrat">06 16 61 49 97</span>
+                <span class="iconBox">
+                    <Icon name="call" color="white" />
+                </span>
+                
+                <span class="montserrat-400">06 16 61 49 97</span>
             </a>
         </div>
 
-        <a class="topBarContactIcon icon pointer" href="mailto:synthese-electrique@outlook.fr" rel="noopener noreferrer">alternate_email</a>
+        <a class="topBarContactIcon icon pointer" href="mailto:synthese-electrique@outlook.fr" rel="noopener noreferrer">
+            <div class="icon normal">
+                <Icon name="email" color="var(--brand-color-1)" />
+            </div>
 
-        <a class="topBarContactIcon locationHoverable icon" href="#" @mouseenter="handleHover" @mouseleave="handleHover" data-target="location">location_on</a>
+            <div class="icon hovered">
+                <Icon name="email" color="white" />
+            </div>
+        </a>
 
-        <p class="appearingButton location montserrat" v-if="maelCarhaixIsOpen"> <span class="icon">location_on</span> Maël-Carhaix</p>
+        <a class="topBarContactIcon locationHoverable icon" href="#" @mouseenter="handleHover" @mouseleave="handleHover" data-target="location">
+            <div class="icon normal">
+                <Icon name="location" color="var(--brand-color-1)" />
+            </div>
+        
+            <div class="icon hovered">
+                <Icon name="location" color="white" />
+            </div>
+        </a>
+
+        <p class="appearingButton location montserrat-400" v-if="maelCarhaixIsOpen"> <span class="icon">
+            <span class="iconBox">
+                <Icon name="location" color="white" />
+            </span>
+        </span> Maël-Carhaix</p>
     </div>
 </template>
 
@@ -128,33 +164,48 @@ onMounted(() => {
     right: 0;
     z-index: 1000;
 }
-.appearingButton .icon {
+.appearingButton .iconBox {
     width: 30px;
     height: 30px;
     color: white;
     background-color: var(--brand-color-1);
     border-radius: 100px;
     padding: 5px;
-    display: grid;
-    place-items: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .topBarContactIcon{
-    font-size: clamp(20px, 4vw, 30px);
-    line-height: clamp(20px, 4vw, 30px);
+    height: 48px;
+    aspect-ratio: 1/1;
+
     color: var(--brand-color-1);
     background-color: #fff;
-    padding: 10px;
-    border-radius: 500px;
+    border-radius: 50%;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.603);
     transition: 300ms ease;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+.topBarContactIcon > div {
+    height: 60%;
+    aspect-ratio: 1/1;
 }
 .topBarContactIcon:hover{
     color: white;
     background-color: var(--brand-color-1);
     transition: 300ms ease;
 }
-
+.topBarContactIcon .normal,
+.topBarContactIcon:hover .hovered{
+    display: block;
+}
+.topBarContactIcon:hover .normal,
+.topBarContactIcon .hovered{
+    display: none;
+}
 .socialBoxMobile .topBarContactIcon:hover {
     background-color: var(--brand-color-1);
 }

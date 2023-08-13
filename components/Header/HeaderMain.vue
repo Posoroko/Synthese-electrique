@@ -133,11 +133,6 @@ header img {
 .headerTextContainer * {
     color: white;
 }
-/* .headerText {
-    width: min(100%, 35ch);
-    font-size: clamp(18px, 3vw, 24px);
-    font-family: 'Montserrat', sans-serif;
-} */
 
 .imagePortrait {
     filter: brightness(0.7);
