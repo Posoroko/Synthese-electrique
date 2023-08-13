@@ -12,7 +12,7 @@
         </template>
 
         <template v-slot:box2>
-            <CustomImageBoxMain orientation="landscape" imageSrc="/images/wall-600-100q.webp" frameSide="Left"/>
+            <CustomImageBoxMain orientation="landscape" imageSrc="/images/wall-600-100q.webp" imageAlt="Synthese Electric, électricien à Maël-Carhaix." frameSide="Left"/>
         </template>
     </EdSectionMain>
 </template>
