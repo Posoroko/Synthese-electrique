@@ -3,7 +3,7 @@
 
 
 const topBarContent = ref({
-    logoUrl: "/images/logo.png",
+    logoUrl: "/images/logo.webp",
     tabs: [
         {
             text: "Dépannage",

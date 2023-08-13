@@ -1,11 +1,11 @@
 <template>
     <CustomIndexIntroSection />
     
-    <CustomServiceSection />
+    <LazyCustomServiceSection />
 
-    <CustomMapSection />
+    <LazyCustomMapSection />
 
-    <CustomCertificationsSection />
+    <LazyCustomCertificationsSection />
 </template>
 
 <style scoped>
