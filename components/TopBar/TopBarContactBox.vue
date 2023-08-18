@@ -43,30 +43,56 @@ onMounted(() => {
 
 <template>
     <div class="socialBoxMobile topBarBox socialBox alignCenter justifyCenter relative">
-        <div class="topBarContactIcon icon callButtonTell pointer" @click="handleHover" data-target="telephone">call</div>
 
-        <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
-            <a class="mobileCallButton appearingButton pointer" href="tel:0256431150">
-                <span class="icon"><Icon name="call" color="var(--brand-color-2)"></Icon> </span><span class="montserrat">02 56 43 11 50</span>
-            </a>
-
-            <a class="mobileCallButton appearingButton pointer" href="tel:0616614997">
-                <span class="icon">call</span><span class="montserrat-400">06 16 61 49 97</span>
-            </a>
+        <div class="topBarContactIcon callButtonTell pointer" @click="handleHover" data-target="telephone">
+            <div class="iconBox normal">
+                <Icon name="call" color="var(--brand-color-1)" />
+            </div>
         </div>
 
-        <a class="topBarContactIcon icon pointer" href="mailto:synthese-electrique@outlook.fr" rel="noopener noreferrer">alternate_email</a>
+                    <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
 
-        <a class="topBarContactIcon icon pointer" href="#footerAddress">location_on</a>
+                        <a class="mobileCallButton appearingButton pointer" href="tel:0256431150">
+                            <span class="icon centered">
+                                <div class="iconBox">
+                                    <Icon name="call" color="white" />
+                                </div>
+                            </span><span class="montserrat">02 56 43 11 50</span>
+                        </a>
+
+                        <a class="mobileCallButton appearingButton pointer" href="tel:0616614997">
+                            <div class="iconBox">
+                                        <Icon name="call" color="white" />
+                                    </div>
+                            
+                            <span class="montserrat-400">06 16 61 49 97</span>
+                        </a>
+                    </div>
+
+        <div class="topBarContactIcon callButtonTell pointer" @click="handleHover" data-target="telephone">
+            <div class="iconBox normal">
+                <a href="mailto:synthese-electrique@outlook.fr" rel="noopener noreferrer">
+                    <Icon name="email" color="var(--brand-color-1)" />
+                </a>
+            </div>
+        </div>            
+
+        <div class="topBarContactIcon callButtonTell pointer" @click="handleHover" data-target="telephone">
+            <div class="iconBox normal">
+                <a href="#footerAddress" rel="noopener noreferrer">
+                    <Icon name="location" color="var(--brand-color-1)" />
+                </a>
+            </div>
+        </div> 
     </div>
 
     <div class="socialBoxDesktop topBarBox socialBox  alignCenter justifyCenter relative">
         <div class="topBarContactIcon callButtonTell" @mouseenter="handleHover" @mouseleave="handleHover" data-target="telephone">
-            <div class="icon normal">
+            <div class="iconBox normal">
                 <Icon name="call" color="var(--brand-color-1)" />
             </div>
 
-            <div class="icon hovered">
+            <div class="iconBox hovered">
                 <Icon name="call" color="white" />
             </div>
         </div>
@@ -176,10 +202,10 @@ onMounted(() => {
     align-items: center;
 }
 
-.topBarContactIcon{
+.topBarContactIcon,
+.topBarContactIconMobile{
     height: 48px;
     aspect-ratio: 1/1;
-
     color: var(--brand-color-1);
     background-color: #fff;
     border-radius: 50%;
