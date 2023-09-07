@@ -28,7 +28,7 @@ const swapImage = (e) => {
 
         <template v-slot:box2>
             <div class="bodyText1 w100 pad20">
-                <h3 class="imageTitle montserrat">{{ images[counter].title }}</h3>
+                <h3 class="imageTitle montserrat-700-italic">{{ images[counter].title }}</h3>
                 <p>{{ images[counter].alt }}</p>
             </div>
             <div class="full h100 pad20">

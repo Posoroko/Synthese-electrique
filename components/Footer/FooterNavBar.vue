@@ -26,7 +26,7 @@
 
 <style scoped>
 .linkText * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-400', sans-serif;
 }
 .linkText:hover {
     color: var(--brand-color-2);
@@ -37,7 +37,7 @@ a {cursor: pointer;}
     background-color: var(--brand-sec);
     padding: 20px 20px;
     margin-top: 20px;
-    background-image: url('/images/cloth-pattern.jpg');
+    background-image: url('/images/cloth-pattern.webp');
     background-repeat: repeat;
 }
 .linkText {

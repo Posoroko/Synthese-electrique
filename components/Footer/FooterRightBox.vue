@@ -27,7 +27,7 @@
 }
 .scheduleText {
     font-size: clamp(16px, 2vw, 20px);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-400', sans-serif;
     line-height: 1.5;
 }
 .titleFrame svg {

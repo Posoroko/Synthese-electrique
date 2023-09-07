@@ -1,6 +1,50 @@
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap'); */
 
+
+@font-face {
+    font-family: 'Arvo';
+    src: url('/assets/fonts/arvo/Arvo-regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arvo-Bold';
+    src: url('/assets/fonts/arvo/Arvo-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat-400';
+    src: url('/assets/fonts/montserrat/Montserrat-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat-500';
+    src: url('/assets/fonts/montserrat/Montserrat-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat-700';
+    src: url('/assets/fonts/montserrat/Montserrat-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat-700-italic';
+    src: url('/assets/fonts/montserrat/Montserrat-Bold.ttf');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
 
 :root {
     --header-text-size: clamp(20px, 3vw, 28px);
@@ -8,7 +52,7 @@
     --header-text-line-height: 1.3;
 
     --header-title-size: clamp(32px, 3vw, 40px);
-    --header-title-weight: 600;
+
     --header-title-line-height: 1;
 
     --top-bar-tab-size: clamp(18px, 2vw, 28px);
@@ -18,33 +62,37 @@
 .arvo {
     font-family: 'Arvo', serif;
 }
+
 .montserrat {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-400', sans-serif;
 }
+.montserrat-400 {
+    font-family: 'Montserrat-400', sans-serif;
+}
+
 .headerTitle {
-    font-family: "Arvo", serif;
+    font-family: "Arvo-Bold", serif;
     font-size: var(--header-title-size);
-    font-weight: var(--header-title-weight);
     line-height: var(--header-title-line-height);
     text-transform: uppercase;
     
 }
 
 .headerText {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-400', sans-serif;
     font-size: var(--header-text-size);
     font-weight: var(--header-text-weight);
     line-height: var(--header-text-line-height);
 }
 
 .topBarTabText {
-    font-family: "Arvo", serif;
+    font-family: "Arvo-bold", serif;
     font-size: var(--top-bar-tab-size);
     font-weight: var(--top-bar-weight);
     line-height: var(--top-bar-line-height);
 }
 :root {
-    --body-text-family: 'Montserrat';
+    --body-text-family: 'Montserrat-400';
 
     --body-text-size-1: clamp(16px, 3vw, 18px);
     --body-text-weight-1: 400;
@@ -89,7 +137,7 @@
 
 
 :root {
-    --body-title-font-family: 'Arvo', serif;
+    --body-title-font-family: 'Arvo-Bold', serif;
 
     --body-title-size: clamp(22px, 4vw, 32px);
     --body-title-weight: 700;

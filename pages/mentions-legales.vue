@@ -90,7 +90,7 @@ definePageMeta({
     padding: 150px 20px;
 }
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-400', sans-serif;
 }
 
 </style>

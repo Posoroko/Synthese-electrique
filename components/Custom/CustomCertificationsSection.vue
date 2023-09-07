@@ -45,6 +45,7 @@ const certifications = [
         :bottomSlot="true">
 
         <template v-slot:box1>
+
             <div class="w100 flex alignCenter justifyCenter wrap gap30 pad20">
                 <div class="linkBox centered" v-for="(certif, index) in certifications" :key="index" >
                     <a v-if="certif.linkUrl" class="certifLink flex alignCenter justifyCenter" :class="{ 'pointer': certif.linkUrl }" :href="certif.linkUrl" target="_blank">
