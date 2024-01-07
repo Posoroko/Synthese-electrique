@@ -1,145 +1,86 @@
 <script setup>
-const telNumBoxIsOpen = ref(false)
-const maelCarhaixIsOpen = ref(false)
+const activeToolTip = ref("");
 
-
-function handleHover(e) {
-    const target = e.currentTarget.dataset.target
-    if(target === 'telephone' && !telNumBoxIsOpen.value) {
-        telNumBoxIsOpen.value = true
-
-        if(maelCarhaixIsOpen) maelCarhaixIsOpen.value = false
-        return
+function handleTouch(e) {
+    let target = e.currentTarget.dataset.name;
+    if(activeToolTip.value === target) {
+        activeToolTip.value = ""
+        return;
     }
-    if(target === 'location' && !maelCarhaixIsOpen.value) {
-        maelCarhaixIsOpen.value = true
-
-        if(telNumBoxIsOpen) telNumBoxIsOpen.value = false
-        return
-    }
-    telNumBoxIsOpen.value = false
-    maelCarhaixIsOpen.value = false
+    activeToolTip.value = target
 }
 
 onMounted(() => {
-    document.addEventListener('scroll', () => {
-        if (telNumBoxIsOpen.value) telNumBoxIsOpen.value = false
-        if (maelCarhaixIsOpen.value) maelCarhaixIsOpen.value = false
-    })
-    document.addEventListener('click', (e) => {
-        if (telNumBoxIsOpen.value && !e.target.closest('.telNumBox') && !e.target.closest('.callButtonTell')) {
-            telNumBoxIsOpen.value = false
-            return
+    const closeTooltip = (e) => {
+        if (!e.target.closest('.barCallButton')) {
+            activeToolTip.value = "";
         }
-        if (!e.target.closest('.maelCarhaix') && !e.target.closest('.locationHoverable') && maelCarhaixIsOpen.value) {
-            maelCarhaixIsOpen.value = false
-            return
-        }
-    })
-})
+    };
 
+    const closeTooltipOnScroll = () => {
+        activeToolTip.value = "";
+    };
+
+    window.addEventListener('click', closeTooltip);
+    window.addEventListener('scroll', closeTooltipOnScroll);
+
+    onUnmounted(() => {
+        window.removeEventListener('click', closeTooltip);
+        window.removeEventListener('scroll', closeTooltipOnScroll);
+    });
+});
 
 </script>
 
 <template>
-    <div class="socialBoxMobile topBarBox socialBox alignCenter justifyCenter relative">
-
-        <div class="topBarContactIcon callButtonTell pointer" @click="handleHover" data-target="telephone">
-            <div class="iconBox normal">
-                <Icon name="call" color="var(--brand-color-1)" />
+    <div class="socialBox flex alignCenter justifyCenter relative">
+        <div class="barCallButton barButton">
+            <div class="iconBox relative pointer">
+                <div class="touch" data-name="call" @touchstart="handleTouch">
+                    <WidgetsHoverIcon name="call" colorClass="whiteBG" />
+                </div>
             </div>
-        </div>
 
-                    <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
+            <div class="toolTip callToolTip flex column gap5" :class="{ 'active': activeToolTip === 'call' }">
+                <a class=" appearingButton pointer" href="tel:+33256431150">
+                    <span class="iconBox">
+                        <WidgetsHoverIcon name="call" colorClass="blueBG"/>
+                    </span>
+                
+                    <span class="montserrat">02 56 43 11 50</span>
+                </a>
 
-                        <a class="mobileCallButton appearingButton pointer" href="tel:0256431150">
-                            <span class="icon centered">
-                                <div class="iconBox">
-                                    <Icon name="call" color="white" />
-                                </div>
-                            </span><span class="montserrat">02 56 43 11 50</span>
-                        </a>
-
-                        <a class="mobileCallButton appearingButton pointer" href="tel:0616614997">
-                            <div class="iconBox">
-                                        <Icon name="call" color="white" />
-                                    </div>
-                            
-                            <span class="montserrat-400">06 16 61 49 97</span>
-                        </a>
-                    </div>
-
-        <div class="topBarContactIcon callButtonTell pointer" @click="handleHover" data-target="telephone">
-            <div class="iconBox normal">
-                <a href="mailto:synthese-electrique@outlook.fr" rel="noopener noreferrer">
-                    <Icon name="email" color="var(--brand-color-1)" />
+                <a class=" appearingButton pointer" href="tel:+33616614997">
+                    <span class="iconBox">
+                        <WidgetsHoverIcon name="call" colorClass="blueBG"/>
+                    </span>
+                
+                    <span class="montserrat-400">06 16 61 49 97</span>
                 </a>
             </div>
-        </div>            
-
-        <div class="topBarContactIcon callButtonTell pointer" @click="handleHover" data-target="telephone">
-            <div class="iconBox normal">
-                <a href="#footerAddress" rel="noopener noreferrer">
-                    <Icon name="location" color="var(--brand-color-1)" />
-                </a>
-            </div>
-        </div> 
-    </div>
-
-    <div class="socialBoxDesktop topBarBox socialBox  alignCenter justifyCenter relative">
-        <div class="topBarContactIcon callButtonTell" @mouseenter="handleHover" @mouseleave="handleHover" data-target="telephone">
-            <div class="iconBox normal">
-                <Icon name="call" color="var(--brand-color-1)" />
-            </div>
-
-            <div class="iconBox hovered">
-                <Icon name="call" color="white" />
-            </div>
         </div>
 
-        <div class="telNumBox" :class="[telNumBoxIsOpen ? 'open' : 'closed']">
-            <a class=" appearingButton" href="#">
-                <span class="iconBox">
-                    <Icon name="call" color="white" />
-                </span>
-                
-                <span class="montserrat">02 56 43 11 50</span>
-            </a>
-
-            <a class=" appearingButton" href="#">
-                <span class="iconBox">
-                    <Icon name="call" color="white" />
-                </span>
-                
-                <span class="montserrat-400">06 16 61 49 97</span>
-            </a>
-        </div>
-
-        <a class="topBarContactIcon icon pointer" href="mailto:synthese-electrique@outlook.fr" rel="noopener noreferrer">
-            <div class="icon normal">
-                <Icon name="email" color="var(--brand-color-1)" />
-            </div>
-
-            <div class="icon hovered">
-                <Icon name="email" color="white" />
+        <a class="barButton pointer" href="mailto:synthese-electrique@outlook.fr" rel="noopener noreferrer">
+            <div class="iconBox">
+                <WidgetsHoverIcon name="email" colorClass="whiteBG" />
             </div>
         </a>
 
-        <a class="topBarContactIcon locationHoverable icon" href="#" @mouseenter="handleHover" @mouseleave="handleHover" data-target="location">
-            <div class="icon normal">
-                <Icon name="location" color="var(--brand-color-1)" />
-            </div>
-        
-            <div class="icon hovered">
-                <Icon name="location" color="white" />
-            </div>
-        </a>
+        <div class="barButton barLocButton pointer" data-target="location">
+            <a class="iconBox block" href="#footerAddress">
+                <WidgetsHoverIcon name="location" colorClass="whiteBG" />
+            </a>
 
-        <p class="appearingButton location montserrat-400" v-if="maelCarhaixIsOpen"> <span class="icon">
-            <span class="iconBox">
-                <Icon name="location" color="white" />
-            </span>
-        </span> Maël-Carhaix</p>
+            <div class="toolTip locToolTip appearingButton location"> 
+                <span class="iconBox">
+                    <WidgetsHoverIcon name="location" colorClass="blueBG" />
+                </span>
+
+                <span class="montserrat-400">
+                    Maël-Carhaix
+                </span>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -150,107 +91,45 @@ onMounted(() => {
 .socialBox {
     flex-wrap: wrap;
     gap: clamp(5px, 3vw, 20px);
+    z-index: 100000;
 }
-.telNumBox {
-    position: absolute;
-    top: 125%;
-    left: 0%;
-    transform: translate(-35%, 0%);
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    z-index: 1000;
-    overflow: hidden;
-    overflow: visible;
+.barButton .iconBox {
+    width: clamp(40px, 5vw, 48px);
+    aspect-ratio: 1/1;
 }
-.telNumBox.closed {
-    overflow: hidden;
-    opacity: 0;
-    transition: 100ms ease;
-    pointer-events: none;
-}
-.telNumBox.open {
-    opacity: 1;
-    transition: 100ms ease;
-    pointer-events: all;
-}
-.appearingButton {
-    height: 48px;
+.appearingButton{
     background-color: #fff;
-    padding: 0 10px;
+    padding: 5px 15px 5px 5px;
     border-radius: 100px;
+    box-shadow: 3px 3px 10px black;
     display: flex;
+    align-items: center;
     gap: 10px;
-    align-items: center;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.616);
 }
-.appearingButton.location {
-    position: absolute;
-    top: 125%;
-    right: 0;
-    z-index: 1000;
-}
-.appearingButton .iconBox {
-    width: 30px;
-    height: 30px;
-    color: white;
-    background-color: var(--brand-color-1);
-    border-radius: 100px;
-    padding: 5px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.topBarContactIcon,
-.topBarContactIconMobile{
-    height: 48px;
-    aspect-ratio: 1/1;
-    color: var(--brand-color-1);
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.603);
-    transition: 300ms ease;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
-}
-.topBarContactIcon > div {
-    height: 60%;
-    aspect-ratio: 1/1;
-}
-.topBarContactIcon:hover{
-    color: white;
-    background-color: var(--brand-color-1);
-    transition: 300ms ease;
-}
-.topBarContactIcon .normal,
-.topBarContactIcon:hover .hovered{
-    display: block;
-}
-.topBarContactIcon:hover .normal,
-.topBarContactIcon .hovered{
+.toolTip {
+    top: 130%;
     display: none;
+    position: absolute;
 }
-.socialBoxMobile .topBarContactIcon:hover {
-    background-color: var(--brand-color-1);
+.toolTip.active {
+    display: flex;
+}
+.callToolTip {
+    left: -50px;
+}
+.locToolTip {
+    right: 0px;
 }
 
-@media screen and (hover: none) {
-    .socialBoxDesktop{
-        display: none;
-    }
-    .socialBoxMobile{
-        display: flex;
-    }
+.appearingButton .iconBox {
+    width: 40px;
+    height: 40px;
 }
 
 @media screen and (hover: hover) {
-    .socialBoxDesktop{
+    .barCallButton:hover  .toolTip,
+    .barLocButton:hover .toolTip{
         display: flex;
-    }
-    .socialBoxMobile{
-        display: none;
     }
 }
 </style>
