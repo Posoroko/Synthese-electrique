@@ -60,7 +60,7 @@ onMounted(() => {
             </div>
         </div>
 
-        <a class="barButton pointer" href="mailto:synthese-electrique@outlook.fr" rel="noopener noreferrer">
+        <a class="barButton pointer" href="mailto:synthese-electric@outlook.fr" rel="noopener noreferrer">
             <div class="iconBox">
                 <WidgetsHoverIcon name="email" colorClass="whiteBG" />
             </div>
