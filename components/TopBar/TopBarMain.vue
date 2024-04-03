@@ -26,7 +26,7 @@ const topBarContent = ref({
         },
         {
             type: "email",
-            value: "synthese-electrique@outlook.fr",
+            value: "synthese-electric@outlook.fr",
             icon: "alternate_email"
         },
         {
