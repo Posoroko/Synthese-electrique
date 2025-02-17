@@ -11,7 +11,7 @@ const certifications = [
         linkUrl: 'https://www.qualifelec.fr/'
     }
     , {
-        imageUrl: '/images/certifications/maaf-pro-2023.webp',
+        imageUrl: '/images/certifications/maaf-pro-2025.webp',
         imageAlt: 'Artisan référence - MAAF',
         linkUrl: null
     },
